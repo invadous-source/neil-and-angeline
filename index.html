@@ -355,25 +355,6 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:24px 7
   border-top:1px solid rgba(155,107,121,.16);
 }
 .flip-card span{position:relative;z-index:1}
-.venue-preview{margin-top:10px}
-.venue-label{
-  font-size:clamp(1.55rem,3vw,2.2rem);
-  color:#8b6f77;
-  font-weight:400;
-}
-.venue-line{
-  width:140px;
-  height:1px;
-  margin:10px auto 20px;
-  background:linear-gradient(90deg,transparent,#d49a8a,transparent);
-}
-.venue-preview h3{
-  margin:0;
-  color:#b35f72;
-  font-size:clamp(2rem,4.5vw,3.7rem);
-  font-weight:400;
-  font-style:italic;
-}
 @media(max-width:700px){
   .save-date-section{padding:68px 15px 75px}
   .countdown-grid{gap:15px;margin-bottom:75px}
@@ -387,13 +368,6 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:24px 7
 }
 
 /* VENUES */
-.venue-intro{
-  max-width:600px;
-  margin:0 auto;
-  color:#80666d;
-  font-size:.98rem;
-  line-height:1.8;
-}
 .venues-section{
   position:relative;
   padding:88px 7vw 105px;
@@ -404,6 +378,30 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:24px 7
     linear-gradient(180deg,#fff9fa 0%,#f9e8ec 100%);
 }
 .venues-inner{max-width:1050px;margin:0 auto}
+.venue-ornament{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  width:min(330px,80%);
+  margin:8px auto 14px;
+  color:#d58a9d;
+}
+.venue-ornament::before,
+.venue-ornament::after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,#d9a0ad);
+}
+.venue-ornament::after{
+  background:linear-gradient(90deg,#d9a0ad,transparent);
+}
+.venue-ornament span{
+  font-size:1.05rem;
+  line-height:1;
+  text-shadow:0 2px 7px rgba(183,95,118,.16);
+}
 .venue-cards{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -451,6 +449,30 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:24px 7
   color:#a35f72;
   font-size:1rem;
   font-style:italic;
+}
+.venue-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:190px;
+  max-width:80%;
+  margin:17px auto 12px;
+}
+.venue-divider::before,
+.venue-divider::after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:linear-gradient(90deg,transparent,#e2b0bb);
+}
+.venue-divider::after{
+  background:linear-gradient(90deg,#e2b0bb,transparent);
+}
+.venue-divider span{
+  color:#df91a4;
+  font-size:.95rem;
+  line-height:1;
 }
 .venue-address{
   margin:13px auto 24px;
@@ -606,11 +628,6 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
         </div>
       </div>
 
-      <div class="venue-preview">
-        <div class="venue-label">Our Venues</div>
-        <div class="venue-line"></div>
-        <p class="venue-intro">Join us as we celebrate our special day in Tanay, Rizal.</p>
-      </div>
     </div>
   </section>
 
@@ -619,6 +636,7 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
     <div class="venues-inner">
       <div class="section-heading">
         <h2>OUR VENUES</h2>
+        <div class="venue-ornament" aria-hidden="true"><span>♡</span></div>
         <p>NOVEMBER 26, 2026 • TANAY, RIZAL</p>
       </div>
 
@@ -628,6 +646,7 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
           <div class="venue-type">CEREMONY</div>
           <h3>San Ildefonso de Toledo Parish</h3>
           <p class="venue-location">Tanay Church</p>
+          <div class="venue-divider" aria-hidden="true"><span>♡</span></div>
           <p class="venue-address">Tanay, Rizal, Philippines</p>
           <a class="maps-button" href="https://www.google.com/maps/place/Parokya+ni+San+Ildefonso+De+Toledo/@14.4984975,121.2821145,17z/data=!3m1!4b1!4m6!3m5!1s0x3397ea160607dc03:0xe69647c9eff0932f!8m2!3d14.4984975!4d121.2846948!16s%2Fg%2F11bwh5tr89?entry=ttu&amp;g_ep=EgoyMDI2MDgzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             <span>⌖</span> Open in Google Maps
@@ -639,6 +658,7 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
           <div class="venue-type">RECEPTION</div>
           <h3>Villa Resurreccion Tanay</h3>
           <p class="venue-location">Private Resort</p>
+          <div class="venue-divider" aria-hidden="true"><span>♡</span></div>
           <p class="venue-address">Tanay, Rizal, Philippines</p>
           <a class="maps-button" href="https://www.google.com/maps/place/Villa+Resurreccion+Tanay+Private+Resort/@14.5014038,121.2932321,17z/data=!3m1!4b1!4m6!3m5!1s0x3397eb0011100a93:0x1694b71a11c19b0e!8m2!3d14.5014038!4d121.2958124!16s%2Fg%2F11vjxmyzm4?entry=ttu&amp;g_ep=EgoyMDI2MDgzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             <span>⌖</span> Open in Google Maps
