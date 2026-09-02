@@ -706,7 +706,7 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
       </div>
 
       <div class="venue-cards">
-        <article class="venue-card">
+        <lass="venue-card">
           <div class="venue-icon">♡</div>
           <div class="venue-type">CEREMONY</div>
           <h3>San Ildefonso de Toledo Parish</h3>
@@ -752,11 +752,16 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
           <p class="party-name">Mrs. Johanna Abibuag</p>
         </article>
 
-        <article class="party-card">
-          <h3>Parents of the Groom</h3>
-          <p class="party-note">In loving memory</p><p class="party-name">Mr. Romulo Ferrer</p>
-          <p class="party-name">Mrs. Cristina Ferrer</p>
-        </article>
+```html
+<article class="party-card">
+  <h3>Parents of the Groom</h3>
+  <p class="party-name">
+    Mr. Romulo Ferrer <span class="party-note">In loving memory</span>
+  </p>
+  <p class="party-name">Mrs. Cristina Ferrer</p>
+</article>
+```
+
 
         <article class="party-card full">
           <h3>Principal Sponsors</h3>
