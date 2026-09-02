@@ -522,79 +522,64 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
 /* WEDDING PARTY / ENTOURAGE */
 .entourage-section{
   position:relative;
-  padding:95px 7vw 110px;
+  padding:110px 7vw 125px;
   text-align:center;
   overflow:hidden;
   background:
-    radial-gradient(circle at 12% 20%,rgba(238,173,190,.16),transparent 25%),
-    radial-gradient(circle at 88% 75%,rgba(216,173,134,.10),transparent 25%),
-    linear-gradient(180deg,#fff9fa 0%,#f8e9ed 100%);
+    radial-gradient(circle at 8% 15%,rgba(231,165,181,.22),transparent 25%),
+    radial-gradient(circle at 92% 35%,rgba(216,173,134,.12),transparent 24%),
+    radial-gradient(circle at 50% 105%,rgba(235,177,191,.18),transparent 32%),
+    linear-gradient(180deg,#fffafa 0%,#f8e8ed 100%);
 }
-.entourage-inner{max-width:1100px;margin:0 auto}
-.entourage-heading h2{
-  margin:0;
-  color:#744653;
-  font-weight:400;
-  font-size:clamp(2rem,4.5vw,3.2rem);
-  letter-spacing:.05em;
-  text-transform:uppercase;
+.entourage-section::before,.entourage-section::after{
+  content:"";position:absolute;pointer-events:none;border:1px solid rgba(192,113,135,.13);border-radius:50%;
 }
-.entourage-subtitle{
-  margin:8px 0 12px;
-  color:#b56579;
-  font-family:Georgia,serif;
-  font-size:clamp(1.7rem,3.5vw,2.5rem);
-  font-style:italic;
-  font-weight:400;
-}
-.entourage-ornament{display:flex;align-items:center;justify-content:center;gap:12px;margin:4px auto 38px;color:#d98b9d}
-.entourage-ornament::before,.entourage-ornament::after{content:"";width:min(170px,25vw);height:1px;background:linear-gradient(90deg,transparent,#e6b3bf)}
-.entourage-ornament::after{background:linear-gradient(90deg,#e6b3bf,transparent)}
-.entourage-ornament span{font-size:1.15rem}
-.party-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:20px}
-.party-card{
-  padding:30px 28px;
-  border:1px solid rgba(193,119,139,.18);
-  border-radius:22px;
-  background:rgba(255,255,255,.72);
-  box-shadow:0 15px 38px rgba(124,77,91,.10);
-}
+.entourage-section::before{width:420px;height:420px;left:-270px;top:120px}
+.entourage-section::after{width:500px;height:500px;right:-330px;bottom:80px}
+.entourage-inner{max-width:1120px;margin:0 auto;position:relative;z-index:1}
+.entourage-heading{margin-bottom:55px}
+.entourage-kicker{margin:0 0 12px;color:#b06a7b;font-size:.65rem;font-weight:bold;letter-spacing:.3em;text-transform:uppercase}
+.entourage-heading h2{margin:0;color:#70434f;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.45rem,5.5vw,4.4rem);line-height:1;font-weight:400}
+.entourage-subtitle{margin:12px 0 17px;color:#b56579;font-family:Georgia,serif;font-size:clamp(1.65rem,3.5vw,2.5rem);font-style:italic;font-weight:400}
+.entourage-intro{max-width:600px;margin:0 auto 24px;color:#866b73;font-size:.92rem;line-height:1.8}
+.entourage-ornament{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px auto 0;color:#d58a9d}
+.entourage-ornament::before,.entourage-ornament::after{content:"";width:min(190px,24vw);height:1px;background:linear-gradient(90deg,transparent,#ddb0bb)}
+.entourage-ornament::after{background:linear-gradient(90deg,#ddb0bb,transparent)}
+.entourage-ornament span{font-size:1.1rem}
+.party-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px;margin-top:0}
+.party-card{grid-column:span 6;position:relative;padding:34px 30px 32px;border:1px solid rgba(190,111,132,.18);border-radius:4px;background:rgba(255,255,255,.68);box-shadow:0 16px 45px rgba(124,77,91,.08);backdrop-filter:blur(9px);overflow:hidden;transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease}
+.party-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(205,137,153,.10);pointer-events:none}
+.party-card::after{content:"✦";position:absolute;top:12px;right:17px;color:#d9a2af;font-size:.72rem;opacity:.7}
+.party-card:hover{transform:translateY(-5px);box-shadow:0 22px 52px rgba(124,77,91,.13);border-color:rgba(190,111,132,.28)}
 .party-card.full{grid-column:1/-1}
-.party-card h3{
-  margin:0 0 18px;
-  color:#a35d70;
-  font-size:.72rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:600;
-}
-.party-card h4{
-  margin:22px 0 8px;
-  color:#b56579;
-  font-family:Georgia,serif;
-  font-size:1.35rem;
-  font-style:italic;
-  font-weight:400;
-}
-.party-card h4:first-of-type{margin-top:0}
-.party-name{margin:4px 0;color:#704652;font-size:1rem;line-height:1.55;letter-spacing:.03em}
-.party-note{margin:-4px 0 8px;color:#9d7881;font-size:.82rem;font-style:italic}
-.party-divider{height:1px;width:75px;margin:20px auto;background:#e5b4bf;position:relative}
-.party-divider::after{content:"♡";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:0 7px;background:#fffafc;color:#d9879a;font-size:.9rem}
-.party-columns{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
-.party-role{margin-top:25px}
-.party-role-title{margin:0 0 7px;color:#b56579;font-family:Georgia,serif;font-size:1.2rem;font-style:italic}
-.party-people{margin:0;color:#704652;font-size:.98rem;line-height:1.7}
+.party-card h3{position:relative;margin:0 0 22px;color:#9d596c;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;font-weight:bold}
+.party-card h3::after{content:"";display:block;width:42px;height:1px;margin:12px auto 0;background:#dba5b2}
+.party-name{margin:7px 0;color:#68424c;font-family:Georgia,"Times New Roman",serif;font-size:1.04rem;line-height:1.5}
+.party-note{margin:-9px 0 13px;color:#a17c85;font-size:.75rem;font-style:italic}
+.party-columns{display:grid;grid-template-columns:1fr 1fr;gap:8px 55px;max-width:850px;margin:0 auto}
+.party-columns>div{min-width:0}
+.party-role{margin-top:25px;padding-top:18px;border-top:1px solid rgba(209,151,164,.25)}
+.party-role:first-child{margin-top:0;border-top:0;padding-top:0}
+.party-role-title{margin:0 0 8px;color:#b56579;font-family:Georgia,serif;font-size:1.35rem;font-style:italic;font-weight:400}
+.party-people{margin:0;color:#68424c;font-family:Georgia,"Times New Roman",serif;font-size:1rem;line-height:1.8}
 .party-people span{display:block}
-.party-feature{padding:10px 5px 4px}
-.party-feature .party-role-title{font-size:1.5rem}
-@media(max-width:700px){
-  .entourage-section{padding:72px 15px 82px}
+.party-feature{padding:4px 5px 2px}
+.party-feature .party-role-title{font-size:1.55rem}
+.entourage-closing{margin:52px auto 0;color:#9b727c;font-family:Georgia,serif;font-size:.9rem;font-style:italic}
+.entourage-closing::before{content:"♡";display:block;margin-bottom:10px;color:#d58a9d;font-size:1rem}
+@media(max-width:800px){
+  .entourage-section{padding:82px 15px 95px}
   .party-grid{grid-template-columns:1fr;gap:18px}
-  .party-card.full{grid-column:auto}
-  .party-card{padding:26px 20px}
-  .party-columns{grid-template-columns:1fr;gap:4px}
-  .party-role{margin-top:22px}
+  .party-card,.party-card.full{grid-column:auto}
+  .party-columns{grid-template-columns:1fr;gap:0}
+  .party-card{padding:30px 22px}
+}
+@media(max-width:480px){
+  .entourage-heading{margin-bottom:40px}
+  .entourage-heading h2{font-size:2.35rem}
+  .entourage-subtitle{font-size:1.7rem}
+  .entourage-intro{font-size:.84rem}
+  .party-name{font-size:.98rem}
 }
 
 </style>
@@ -753,8 +738,10 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
   <section class="entourage-section" id="entourage">
     <div class="entourage-inner">
       <div class="entourage-heading">
+        <p class="entourage-kicker">Surrounded by the people we love</p>
         <h2>The Wedding Party</h2>
         <div class="entourage-subtitle">The Entourage</div>
+        <p class="entourage-intro">With grateful hearts, we introduce the wonderful people who will stand beside us as we begin this new chapter together.</p>
         <div class="entourage-ornament" aria-hidden="true"><span>♡</span></div>
       </div>
 
@@ -859,6 +846,8 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
           <p class="party-name">Adhara Cassini Valuz</p>
         </article>
       </div>
+
+      <p class="entourage-closing">Together with the people who make our lives a little more beautiful.</p>
     </div>
   </section>
 
