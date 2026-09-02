@@ -518,6 +518,85 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
 .photo-caption{top:88%}
 .photo-caption strong{font-size:1rem}
 .envelope-stage{height:270px}.nav-links{display:none}.details-grid{grid-template-columns:1fr}}
+
+/* WEDDING PARTY / ENTOURAGE */
+.entourage-section{
+  position:relative;
+  padding:95px 7vw 110px;
+  text-align:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 12% 20%,rgba(238,173,190,.16),transparent 25%),
+    radial-gradient(circle at 88% 75%,rgba(216,173,134,.10),transparent 25%),
+    linear-gradient(180deg,#fff9fa 0%,#f8e9ed 100%);
+}
+.entourage-inner{max-width:1100px;margin:0 auto}
+.entourage-heading h2{
+  margin:0;
+  color:#744653;
+  font-weight:400;
+  font-size:clamp(2rem,4.5vw,3.2rem);
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.entourage-subtitle{
+  margin:8px 0 12px;
+  color:#b56579;
+  font-family:Georgia,serif;
+  font-size:clamp(1.7rem,3.5vw,2.5rem);
+  font-style:italic;
+  font-weight:400;
+}
+.entourage-ornament{display:flex;align-items:center;justify-content:center;gap:12px;margin:4px auto 38px;color:#d98b9d}
+.entourage-ornament::before,.entourage-ornament::after{content:"";width:min(170px,25vw);height:1px;background:linear-gradient(90deg,transparent,#e6b3bf)}
+.entourage-ornament::after{background:linear-gradient(90deg,#e6b3bf,transparent)}
+.entourage-ornament span{font-size:1.15rem}
+.party-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:20px}
+.party-card{
+  padding:30px 28px;
+  border:1px solid rgba(193,119,139,.18);
+  border-radius:22px;
+  background:rgba(255,255,255,.72);
+  box-shadow:0 15px 38px rgba(124,77,91,.10);
+}
+.party-card.full{grid-column:1/-1}
+.party-card h3{
+  margin:0 0 18px;
+  color:#a35d70;
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.party-card h4{
+  margin:22px 0 8px;
+  color:#b56579;
+  font-family:Georgia,serif;
+  font-size:1.35rem;
+  font-style:italic;
+  font-weight:400;
+}
+.party-card h4:first-of-type{margin-top:0}
+.party-name{margin:4px 0;color:#704652;font-size:1rem;line-height:1.55;letter-spacing:.03em}
+.party-note{margin:-4px 0 8px;color:#9d7881;font-size:.82rem;font-style:italic}
+.party-divider{height:1px;width:75px;margin:20px auto;background:#e5b4bf;position:relative}
+.party-divider::after{content:"♡";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:0 7px;background:#fffafc;color:#d9879a;font-size:.9rem}
+.party-columns{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px}
+.party-role{margin-top:25px}
+.party-role-title{margin:0 0 7px;color:#b56579;font-family:Georgia,serif;font-size:1.2rem;font-style:italic}
+.party-people{margin:0;color:#704652;font-size:.98rem;line-height:1.7}
+.party-people span{display:block}
+.party-feature{padding:10px 5px 4px}
+.party-feature .party-role-title{font-size:1.5rem}
+@media(max-width:700px){
+  .entourage-section{padding:72px 15px 82px}
+  .party-grid{grid-template-columns:1fr;gap:18px}
+  .party-card.full{grid-column:auto}
+  .party-card{padding:26px 20px}
+  .party-columns{grid-template-columns:1fr;gap:4px}
+  .party-role{margin-top:22px}
+}
+
 </style>
 </head>
 <body>
@@ -551,6 +630,7 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
       <a href="#home">Home</a>
       <a href="#save-date">Save the Date</a>
       <a href="#venues">Venues</a>
+      <a href="#entourage">Entourage</a>
     </div>
   </nav>
 
@@ -663,6 +743,120 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
           <a class="maps-button" href="https://www.google.com/maps/place/Villa+Resurreccion+Tanay+Private+Resort/@14.5014038,121.2932321,17z/data=!3m1!4b1!4m6!3m5!1s0x3397eb0011100a93:0x1694b71a11c19b0e!8m2!3d14.5014038!4d121.2958124!16s%2Fg%2F11vjxmyzm4?entry=ttu&amp;g_ep=EgoyMDI2MDgzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             <span>⌖</span> Open in Google Maps
           </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WEDDING PARTY / ENTOURAGE -->
+  <section class="entourage-section" id="entourage">
+    <div class="entourage-inner">
+      <div class="entourage-heading">
+        <h2>The Wedding Party</h2>
+        <div class="entourage-subtitle">The Entourage</div>
+        <div class="entourage-ornament" aria-hidden="true"><span>♡</span></div>
+      </div>
+
+      <div class="party-grid">
+        <article class="party-card">
+          <h3>Parents of the Bride</h3>
+          <p class="party-name">Mr. Noel Abibuag</p>
+          <p class="party-name">Mrs. Johanna Abibuag</p>
+        </article>
+
+        <article class="party-card">
+          <h3>Parents of the Groom</h3>
+          <p class="party-note">In loving memory</p>
+          <p class="party-name">Mr. Romulo Ferrer</p>
+          <p class="party-name">Mrs. Cristina Ferrer</p>
+        </article>
+
+        <article class="party-card full">
+          <h3>Principal Sponsors</h3>
+          <div class="party-columns">
+            <div>
+              <p class="party-name">Mrs. Zenaida Gambol</p>
+              <p class="party-name">Mrs. Rosario Sandrin-Lopez</p>
+              <p class="party-name">Mrs. Priscilla Ferrer</p>
+              <p class="party-name">Mrs. Milagros Soliva-Felipe</p>
+            </div>
+            <div>
+              <p class="party-name">Mr. Manolito Tabor</p>
+              <p class="party-name">Mr. Rafael Lopez</p>
+              <p class="party-name">Mr. Ramon Rulian</p>
+              <p class="party-name">Mr. Cesar Labao</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="party-card">
+          <div class="party-feature">
+            <div class="party-role-title">Maid of Honor</div>
+            <p class="party-people"><span>Lizette Anne Abibuag</span></p>
+          </div>
+          <div class="party-divider"></div>
+          <div class="party-feature">
+            <div class="party-role-title">Best Man</div>
+            <p class="party-people"><span>Roy Ferrer</span></p>
+          </div>
+        </article>
+
+        <article class="party-card">
+          <h3>Bridesmaids</h3>
+          <p class="party-name">Darlene Grace Salvador</p>
+          <p class="party-name">Victoria Jane Abuan</p>
+        </article>
+
+        <article class="party-card">
+          <h3>Groomsmen</h3>
+          <p class="party-name">Ralph Gregor Abugan</p>
+          <p class="party-name">Cliff Richard Delos Santos</p>
+        </article>
+
+        <article class="party-card full">
+          <h3>Secondary Sponsors</h3>
+          <div class="party-columns">
+            <div>
+              <div class="party-role">
+                <div class="party-role-title">Veil</div>
+                <p class="party-people"><span>Cecille Mae Dy</span><span>Domingo Miguel Huelar</span></p>
+              </div>
+              <div class="party-role">
+                <div class="party-role-title">Candle</div>
+                <p class="party-people"><span>Gemma Leonor Miranda</span><span>Von Valuz</span></p>
+              </div>
+            </div>
+            <div>
+              <div class="party-role">
+                <div class="party-role-title">Cord</div>
+                <p class="party-people"><span>Genevee Rellores</span><span>Rencie Cequeña</span></p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="party-card">
+          <h3>Special Roles</h3>
+          <div class="party-role">
+            <div class="party-role-title">Bible Bearer</div>
+            <p class="party-people">Aljor Tano</p>
+          </div>
+          <div class="party-role">
+            <div class="party-role-title">Ring Bearer</div>
+            <p class="party-people">Kian Andrew Bernardez</p>
+          </div>
+          <div class="party-role">
+            <div class="party-role-title">Coin Bearer</div>
+            <p class="party-people">Jacob Lim</p>
+          </div>
+        </article>
+
+        <article class="party-card">
+          <h3>Flower Girls</h3>
+          <p class="party-name">Aneira Anwen Bernardez</p>
+          <p class="party-name">Vianca Alycia Co</p>
+          <p class="party-name">Adhara Cassini Valuz</p>
         </article>
       </div>
     </div>
