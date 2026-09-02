@@ -280,6 +280,112 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:24px 7
   .main-photo-frame{width:min(78vw,320px)}
 }
 
+
+/* SAVE THE DATE + COUNTDOWN */
+.save-date-section{
+  position:relative;
+  padding:82px 20px 95px;
+  overflow:hidden;
+  text-align:center;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.9),transparent 22%),
+    radial-gradient(circle at 85% 78%,rgba(238,173,190,.20),transparent 28%),
+    linear-gradient(180deg,#fff8fa 0%,#f7e8ec 100%);
+}
+.save-date-section::before,
+.save-date-section::after{
+  content:"";
+  position:absolute;
+  width:260px;height:260px;border-radius:50%;
+  filter:blur(55px);opacity:.28;pointer-events:none;
+}
+.save-date-section::before{background:#f0b7c5;top:-110px;left:-90px}
+.save-date-section::after{background:#fff;right:-100px;bottom:-130px}
+.save-date-inner{position:relative;z-index:1;max-width:900px;margin:auto}
+.section-heading h2{
+  margin:0;
+  color:#744653;
+  font-weight:400;
+  font-size:clamp(1.9rem,4vw,3rem);
+  letter-spacing:.04em;
+}
+.section-heading p{
+  margin:7px 0 42px;
+  font-size:.72rem;
+  letter-spacing:.22em;
+  color:#9a7680;
+}
+.countdown-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  max-width:780px;
+  margin:0 auto 105px;
+}
+.countdown-group small{
+  display:block;
+  margin-top:14px;
+  color:#98747e;
+  letter-spacing:.16em;
+  font-size:.67rem;
+}
+.flip-pair{
+  display:flex;
+  justify-content:center;
+  gap:7px;
+}
+.flip-card{
+  width:78px;
+  height:103px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  color:#a16778;
+  font-size:3.15rem;
+  font-weight:600;
+  background:linear-gradient(145deg,#fff,#f6eff1);
+  box-shadow:0 8px 16px rgba(124,77,91,.15),inset 0 1px 0 rgba(255,255,255,.95);
+}
+.flip-card::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:50%;
+  border-top:1px solid rgba(155,107,121,.16);
+}
+.flip-card span{position:relative;z-index:1}
+.venue-preview{margin-top:10px}
+.venue-label{
+  font-size:clamp(1.55rem,3vw,2.2rem);
+  color:#8b6f77;
+  font-weight:400;
+}
+.venue-line{
+  width:140px;
+  height:1px;
+  margin:10px auto 20px;
+  background:linear-gradient(90deg,transparent,#d49a8a,transparent);
+}
+.venue-preview h3{
+  margin:0;
+  color:#b35f72;
+  font-size:clamp(2rem,4.5vw,3.7rem);
+  font-weight:400;
+  font-style:italic;
+}
+@media(max-width:700px){
+  .save-date-section{padding:68px 15px 75px}
+  .countdown-grid{gap:15px;margin-bottom:75px}
+  .flip-card{width:56px;height:78px;font-size:2.25rem}
+}
+@media(max-width:440px){
+  .countdown-grid{gap:8px}
+  .flip-pair{gap:4px}
+  .flip-card{width:42px;height:64px;font-size:1.8rem}
+  .countdown-group small{font-size:.55rem;letter-spacing:.1em}
+}
+
 .details{padding:85px 7vw;background:linear-gradient(135deg,#f9e3e8,#fff8f8,#f3d4dc);text-align:center}.details h2{font-size:2.4rem;font-weight:400;color:var(--rose-dark)}
 .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:950px;margin:35px auto 0}.detail{padding:28px;background:rgba(255,255,255,.56)}.detail span{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#a87a86;margin-bottom:12px}.detail strong{font-size:1.08rem;font-weight:400}
 footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
@@ -302,7 +408,7 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
         <div class="flap"></div>
         <div class="front"></div>
         <div class="photo-stack" aria-hidden="true">
-          <div class="memory memory-1"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=85" alt=""></div>
+          <div class="memory memory-1"><img src="photo1.jpg" alt=""></div>
           <div class="memory memory-2"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=85" alt=""></div>
           <div class="memory memory-3"><img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=700&q=85" alt=""></div>
         </div>
@@ -355,6 +461,57 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
       </audio>
 
       <button class="cta" onclick="document.getElementById('details').scrollIntoView({behavior:'smooth'})">Explore Our Celebration</button>
+    </div>
+  </section>
+
+
+  <!-- SAVE THE DATE -->
+  <section class="save-date-section" id="save-date">
+    <div class="save-date-inner">
+      <div class="section-heading">
+        <h2>SAVE THE DATE</h2>
+        <p>NOVEMBER 26, 2026 • THURSDAY</p>
+      </div>
+
+      <div class="countdown-grid" aria-label="Wedding countdown">
+        <div class="countdown-group">
+          <div class="flip-pair">
+            <div class="flip-card"><span id="daysTens">0</span></div>
+            <div class="flip-card"><span id="daysOnes">0</span></div>
+          </div>
+          <small>DAYS</small>
+        </div>
+
+        <div class="countdown-group">
+          <div class="flip-pair">
+            <div class="flip-card"><span id="hoursTens">0</span></div>
+            <div class="flip-card"><span id="hoursOnes">0</span></div>
+          </div>
+          <small>HOURS</small>
+        </div>
+
+        <div class="countdown-group">
+          <div class="flip-pair">
+            <div class="flip-card"><span id="minutesTens">0</span></div>
+            <div class="flip-card"><span id="minutesOnes">0</span></div>
+          </div>
+          <small>MINUTES</small>
+        </div>
+
+        <div class="countdown-group">
+          <div class="flip-pair">
+            <div class="flip-card"><span id="secondsTens">0</span></div>
+            <div class="flip-card"><span id="secondsOnes">0</span></div>
+          </div>
+          <small>SECONDS</small>
+        </div>
+      </div>
+
+      <div class="venue-preview">
+        <div class="venue-label">The Venues</div>
+        <div class="venue-line"></div>
+        <h3>Venue to be announced</h3>
+      </div>
     </div>
   </section>
 
@@ -421,6 +578,39 @@ envelope.addEventListener('keydown', e => {
     openInvitation();
   }
 });
+
+// SAVE THE DATE COUNTDOWN
+// Replace this placeholder with your actual wedding date later.
+const weddingDate = new Date('2026-11-26T15:00:00');
+
+function setTwoDigits(prefix, value){
+  const text = String(Math.max(0, value)).padStart(2, '0');
+  const tens = document.getElementById(prefix + 'Tens');
+  const ones = document.getElementById(prefix + 'Ones');
+  if(tens) tens.textContent = text[0];
+  if(ones) ones.textContent = text[1];
+}
+
+function updateWeddingCountdown(){
+  const now = new Date();
+  let diff = weddingDate.getTime() - now.getTime();
+  if(diff < 0) diff = 0;
+
+  const totalSeconds = Math.floor(diff / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  // Days may exceed 99; show the last two digits until a real wedding date is set.
+  setTwoDigits('days', days % 100);
+  setTwoDigits('hours', hours);
+  setTwoDigits('minutes', minutes);
+  setTwoDigits('seconds', seconds);
+}
+updateWeddingCountdown();
+setInterval(updateWeddingCountdown, 1000);
+
 </script>
 </body>
 </html>
