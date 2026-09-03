@@ -600,9 +600,9 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
   padding:110px 7vw 125px;
   overflow:hidden;
   background:
-    radial-gradient(circle at 7% 15%, rgba(201,170,139,.12), transparent 23%),
-    radial-gradient(circle at 92% 82%, rgba(184,143,151,.10), transparent 26%),
-    linear-gradient(180deg,#fffdfb 0%,#f8f5f2 52%,#fffdfb 100%);
+    radial-gradient(circle at 7% 15%, rgba(201,170,139,.22), transparent 25%),
+    radial-gradient(circle at 92% 82%, rgba(184,143,151,.18), transparent 28%),
+    linear-gradient(180deg,#fffaf6 0%,#f1ece7 52%,#fffaf8 100%);
 }
 .love-story-section::before,
 .love-story-section::after{
@@ -672,9 +672,9 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
   grid-template-columns:minmax(0,1fr) minmax(380px,1fr);
   align-items:center;
   gap:82px;
-  padding:36px 30px;
-  border-top:1px solid rgba(160,132,107,.18);
-  border-bottom:1px solid rgba(160,132,107,.10);
+  padding:48px 34px;
+  border-top:2px solid rgba(160,132,107,.30);
+  border-bottom:2px solid rgba(160,132,107,.18);
 }
 .story-item::before{
   content:"";
@@ -713,6 +713,23 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
   margin-top:22px;
   color:#b79a78;
   font-size:1.1rem;
+}
+
+.story-number{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  margin:0 auto 16px;
+  border-radius:50%;
+  border:1px solid rgba(165,137,104,.65);
+  background:linear-gradient(145deg,#fffdf9,#efe2d3);
+  color:#9b7b58;
+  font-size:.72rem;
+  letter-spacing:.12em;
+  font-weight:600;
+  box-shadow:0 5px 15px rgba(115,86,60,.10);
 }
 .story-title{
   margin:0;
@@ -761,8 +778,8 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
   justify-self:center;
   padding:11px;
   background:#fffdf9;
-  border:1px solid rgba(176,145,113,.30);
-  box-shadow:0 20px 45px rgba(83,66,58,.13);
+  border:2px solid rgba(176,145,113,.48);
+  box-shadow:0 24px 55px rgba(83,66,58,.18), 0 0 0 7px rgba(255,255,255,.55);
   transform:rotate(.35deg);
   transition:transform .35s ease, box-shadow .35s ease;
 }
@@ -963,6 +980,43 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
       <div class="story-list">
         <article class="story-item">
           <div class="story-copy">
+            <span class="story-number">01</span>
+            <h3 class="story-title">FIRST MEET</h3>
+            <div class="story-date">2020</div>
+            <p class="story-text">Our first meeting in the scenic view of Art Sector.</p>
+          </div>
+          <div class="story-photo">
+            <img src="story4.png" alt="First meeting">
+          </div>
+        </article>
+
+        <article class="story-item reverse">
+          <div class="story-copy">
+            <span class="story-number">02</span>
+            <h3 class="story-title">FIRST TRIP</h3>
+            <div class="story-date">Oct 2020</div>
+            <p class="story-text">Our first adventure together. Start of many places and a lot of memories.</p>
+          </div>
+          <div class="story-photo">
+            <img src="story5.png" alt="First trip together">
+          </div>
+        </article>
+
+        <article class="story-item">
+          <div class="story-copy">
+            <span class="story-number">03</span>
+            <h3 class="story-title">FIRST DAY IN RELATIONSHIP</h3>
+            <div class="story-date">Nov 14, 2020</div>
+            <p class="story-text">During lunchtime with a Paint by Numbers photo of us, we became together officially.</p>
+          </div>
+          <div class="story-photo">
+            <img src="story6.png" alt="First day in relationship">
+          </div>
+        </article>
+
+        <article class="story-item reverse">
+          <div class="story-copy">
+            <span class="story-number">04</span>
             <h3 class="story-title">THE PROPOSAL</h3>
             <div class="story-date">Nov 16, 2024</div>
             <p class="story-text">After our Anniversary celebration inside the car, the proposal ring was given &amp; accepted to signify the next level of our relationship.</p>
@@ -972,8 +1026,9 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
           </div>
         </article>
 
-        <article class="story-item reverse">
+        <article class="story-item">
           <div class="story-copy">
+            <span class="story-number">05</span>
             <h3 class="story-title">FIRST FLIGHT</h3>
             <div class="story-date">March 2026</div>
             <p class="story-text">In the blue waters of Bohol, a side trip in a friend's wedding, our first and last trip as before we tie the knot.</p>
@@ -983,47 +1038,15 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
           </div>
         </article>
 
-        <article class="story-item">
+        <article class="story-item reverse">
           <div class="story-copy">
+            <span class="story-number">06</span>
             <h3 class="story-title">OUR WEDDING DAY</h3>
             <div class="story-date">Nov 26, 2026</div>
             <p class="story-text">In front of God, with our family and close friends, we will begin our life together.</p>
           </div>
           <div class="story-photo">
             <img src="story3.png" alt="Our wedding day">
-          </div>
-        </article>
-
-        <article class="story-item reverse">
-          <div class="story-copy">
-            <h3 class="story-title">FIRST MEET</h3>
-            <div class="story-date">2020</div>
-            <p class="story-text">Our first meeting in the scenic view of Art Sector</p>
-          </div>
-          <div class="story-photo">
-            <img src="story4.png" alt="First meeting">
-          </div>
-        </article>
-
-        <article class="story-item">
-          <div class="story-copy">
-            <h3 class="story-title">FIRST TRIP</h3>
-            <div class="story-date">Oct 2020</div>
-            <p class="story-text">Our first adventure together. Start of many places and a lot of memories</p>
-          </div>
-          <div class="story-photo">
-            <img src="story5.png" alt="First trip together">
-          </div>
-        </article>
-
-        <article class="story-item reverse">
-          <div class="story-copy">
-            <h3 class="story-title">FIRST DAY IN RELATIONSHIP</h3>
-            <div class="story-date">Nov 14, 2020</div>
-            <p class="story-text">During lunchtime with a Paint by Numbers photo of us, we became together officially.</p>
-          </div>
-          <div class="story-photo">
-            <img src="story6.png" alt="First day in relationship">
           </div>
         </article>
       </div>
