@@ -1278,6 +1278,88 @@ section{
   .rsvp-button,.memory-button{width:100%;padding:0 18px}
 }
 
+
+/* SPECIAL WEDDING ENDING */
+.special-ending-section{
+  position:relative;
+  min-height:420px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:100px 20px;
+  overflow:hidden;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 20%,rgba(244,205,143,.28),transparent 26%),
+    radial-gradient(circle at 15% 85%,rgba(223,153,180,.14),transparent 25%),
+    radial-gradient(circle at 85% 80%,rgba(184,139,190,.12),transparent 25%),
+    linear-gradient(135deg,#fffaf5 0%,#f3e7dc 48%,#fffaf7 100%);
+}
+.special-ending-section::before,
+.special-ending-section::after{
+  content:"✦";
+  position:absolute;
+  color:rgba(171,127,91,.28);
+  font-size:8rem;
+  animation:endingFloat 7s ease-in-out infinite;
+}
+.special-ending-section::before{left:8%;top:18%}
+.special-ending-section::after{right:8%;bottom:14%;animation-delay:-3s}
+.special-ending-inner{
+  position:relative;
+  z-index:1;
+  max-width:850px;
+}
+.ending-kicker{
+  color:#ad845e;
+  font-size:.72rem;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+  margin-bottom:22px;
+}
+.special-ending-inner h2{
+  margin:0;
+  color:#585452;
+  font-size:clamp(2.8rem,7vw,6rem);
+  font-weight:400;
+  letter-spacing:.08em;
+  line-height:1.05;
+}
+.ending-date{
+  margin:24px 0 18px;
+  color:#a47b57;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:clamp(2.3rem,5vw,4rem);
+}
+.ending-message{
+  max-width:620px;
+  margin:0 auto;
+  color:#786d68;
+  font-size:1rem;
+  line-height:1.9;
+}
+.ending-heart{
+  display:inline-block;
+  margin-top:25px;
+  color:#b77c72;
+  font-size:2rem;
+  animation:endingPulse 2.4s ease-in-out infinite;
+}
+@keyframes endingFloat{
+  0%,100%{transform:translateY(0) rotate(0deg);opacity:.45}
+  50%{transform:translateY(-18px) rotate(12deg);opacity:.8}
+}
+@keyframes endingPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.18)}
+}
+@media(max-width:600px){
+  .special-ending-section{min-height:380px;padding:75px 20px}
+  .special-ending-section::before,.special-ending-section::after{font-size:4.5rem}
+  .special-ending-section::before{left:3%;top:10%}
+  .special-ending-section::after{right:3%;bottom:10%}
+}
+
 </style>
 </head>
 <body>
@@ -1294,14 +1376,12 @@ section{
           <div class="memory memory-3"><img src="photo3.jpg" alt=""></div>
         </div>
         <div class="seal"></div>
-      </div>
-    </div>
+      </div></div>
 
     <h1 class="names">Neil &amp; Anj</h1>
     <div class="date">THURSDAY, NOVEMBER 26, 2026 • 3:00PM</div>
     <div class="place">TANAY, RIZAL</div>
-    <p class="tap">Click the envelope to see details</p>
-  </div>
+    <p class="tap">Click the envelope to see details</p></div>
 </section>
 
 <main id="main">
@@ -1318,8 +1398,7 @@ section{
       <a href="#gifts">Gifts</a>
       <a href="#faq">FAQ</a>
       <a href="#rsvp">RSVP</a>
-      <a href="#guest-gallery">Gallery</a>
-    </div>
+      <a href="#guest-gallery">Gallery</a></div>
   </nav>
 
   <section class="hero wedding-hero" id="home">
@@ -1339,18 +1418,15 @@ section{
         <div class="music-info">
           <span class="music-label">Now Playing</span>
           <strong>Our Wedding Song</strong>
-          <small>Replace this with your chosen song later</small>
-        </div>
-        <button class="music-toggle" id="musicToggle" type="button" aria-label="Play music">▶</button>
-      </div>
+          <small>Replace this with your chosen song later</small></div>
+        <button class="music-toggle" id="musicToggle" type="button" aria-label="Play music">▶</button></div>
 
       <!-- Replace YOUR_WEDDING_SONG.mp3 with your actual music file -->
       <audio id="weddingMusic" preload="auto">
         <source src="YOUR_WEDDING_SONG.mp3" type="audio/mpeg">
       </audio>
 
-      <button class="cta" onclick="document.getElementById('venues').scrollIntoView({behavior:'smooth'})">Explore Our Celebration</button>
-    </div>
+      <button class="cta" onclick="document.getElementById('venues').scrollIntoView({behavior:'smooth'})">Explore Our Celebration</button></div>
   </section>
 
 
@@ -1359,8 +1435,7 @@ section{
     <div class="save-date-inner">
       <div class="section-heading">
         <h2>SAVE THE DATE</h2>
-        <p>NOVEMBER 26, 2026 • THURSDAY</p>
-      </div>
+        <p>NOVEMBER 26, 2026 • THURSDAY</p></div>
 
       <div class="countdown-grid" aria-label="Wedding countdown">
         <div class="countdown-group">
@@ -1368,35 +1443,29 @@ section{
             <div class="flip-card"><span id="daysTens">0</span></div>
             <div class="flip-card"><span id="daysOnes">0</span></div>
           </div>
-          <small>DAYS</small>
-        </div>
+          <small>DAYS</small></div>
 
         <div class="countdown-group">
           <div class="flip-pair">
             <div class="flip-card"><span id="hoursTens">0</span></div>
             <div class="flip-card"><span id="hoursOnes">0</span></div>
           </div>
-          <small>HOURS</small>
-        </div>
+          <small>HOURS</small></div>
 
         <div class="countdown-group">
           <div class="flip-pair">
             <div class="flip-card"><span id="minutesTens">0</span></div>
             <div class="flip-card"><span id="minutesOnes">0</span></div>
           </div>
-          <small>MINUTES</small>
-        </div>
+          <small>MINUTES</small></div>
 
         <div class="countdown-group">
           <div class="flip-pair">
             <div class="flip-card"><span id="secondsTens">0</span></div>
             <div class="flip-card"><span id="secondsOnes">0</span></div>
           </div>
-          <small>SECONDS</small>
-        </div>
-      </div>
-
-    </div>
+          <small>SECONDS</small></div>
+      </div></div>
   </section>
 
 
@@ -1406,8 +1475,7 @@ section{
       <div class="love-story-heading">
         <p class="story-kicker">A little look back at us</p>
         <h2>OUR LOVE STORY</h2>
-        <p>From our first meeting to the beautiful moments that led us here, these are some of the memories we will always treasure.</p>
-      </div>
+        <p>From our first meeting to the beautiful moments that led us here, these are some of the memories we will always treasure.</p></div>
 
       <div class="story-list">
         <article class="story-item">
@@ -1415,11 +1483,9 @@ section{
             <span class="story-number">01</span>
             <h3 class="story-title">FIRST MEET</h3>
             <div class="story-date">2020</div>
-            <p class="story-text">Our first meeting in the scenic view of Art Sector.</p>
-          </div>
+            <p class="story-text">Our first meeting in the scenic view of Art Sector.</p></div>
           <div class="story-photo">
-            <img src="story1.png" alt="First meeting">
-          </div>
+            <img src="story1.png" alt="First meeting"></div>
         </article>
 
         <article class="story-item reverse">
@@ -1427,11 +1493,9 @@ section{
             <span class="story-number">02</span>
             <h3 class="story-title">FIRST TRIP</h3>
             <div class="story-date">Oct 2020</div>
-            <p class="story-text">Our first adventure together. Start of many places and a lot of memories.</p>
-          </div>
+            <p class="story-text">Our first adventure together. Start of many places and a lot of memories.</p></div>
           <div class="story-photo">
-            <img src="story2.png" alt="First trip together">
-          </div>
+            <img src="story2.png" alt="First trip together"></div>
         </article>
 
         <article class="story-item">
@@ -1439,11 +1503,9 @@ section{
             <span class="story-number">03</span>
             <h3 class="story-title">FIRST DAY IN RELATIONSHIP</h3>
             <div class="story-date">Nov 14, 2020</div>
-            <p class="story-text">During lunchtime with a Paint by Numbers photo of us, we became together officially.</p>
-          </div>
+            <p class="story-text">During lunchtime with a Paint by Numbers photo of us, we became together officially.</p></div>
           <div class="story-photo">
-            <img src="story3.png" alt="First day in relationship">
-          </div>
+            <img src="story3.png" alt="First day in relationship"></div>
         </article>
 
         <article class="story-item reverse">
@@ -1451,11 +1513,9 @@ section{
             <span class="story-number">04</span>
             <h3 class="story-title">THE PROPOSAL</h3>
             <div class="story-date">Nov 16, 2024</div>
-            <p class="story-text">After our Anniversary celebration inside the car, the proposal ring was given &amp; accepted to signify the next level of our relationship.</p>
-          </div>
+            <p class="story-text">After our Anniversary celebration inside the car, the proposal ring was given &amp; accepted to signify the next level of our relationship.</p></div>
           <div class="story-photo">
-            <img src="story4.png" alt="The proposal">
-          </div>
+            <img src="story4.png" alt="The proposal"></div>
         </article>
 
         <article class="story-item">
@@ -1463,11 +1523,9 @@ section{
             <span class="story-number">05</span>
             <h3 class="story-title">FIRST FLIGHT</h3>
             <div class="story-date">March 2026</div>
-            <p class="story-text">In the blue waters of Bohol, a side trip in a friend's wedding, our first and last trip as before we tie the knot.</p>
-          </div>
+            <p class="story-text">In the blue waters of Bohol, a side trip in a friend's wedding, our first and last trip as before we tie the knot.</p></div>
           <div class="story-photo">
-            <img src="story5.png" alt="First flight and Bohol trip">
-          </div>
+            <img src="story5.png" alt="First flight and Bohol trip"></div>
         </article>
 
         <article class="story-item reverse">
@@ -1475,16 +1533,12 @@ section{
             <span class="story-number">06</span>
             <h3 class="story-title">OUR WEDDING DAY</h3>
             <div class="story-date">Nov 26, 2026</div>
-            <p class="story-text">In front of God, with our family and close friends, we will begin our life together.</p>
-          </div>
+            <p class="story-text">In front of God, with our family and close friends, we will begin our life together.</p></div>
           <div class="story-photo">
-            <img src="story6.png" alt="Our wedding day">
-          </div>
-        </article>
-      </div>
+            <img src="story6.png" alt="Our wedding day"></div>
+        </article></div>
 
-      <p class="story-note">And the best chapters are still waiting to be written ♡</p>
-    </div>
+      <p class="story-note">And the best chapters are still waiting to be written ♡</p></div>
   </section>
 
   <!-- VENUES -->
@@ -1493,8 +1547,7 @@ section{
       <div class="section-heading">
         <h2>OUR VENUES</h2>
         <div class="venue-ornament" aria-hidden="true"><span>♡</span></div>
-        <p>NOVEMBER 26, 2026 • TANAY, RIZAL</p>
-      </div>
+        <p>NOVEMBER 26, 2026 • TANAY, RIZAL</p></div>
 
       <div class="venue-cards">
         <article class="venue-card">
@@ -1519,8 +1572,7 @@ section{
           <a class="maps-button" href="https://www.google.com/maps/place/Villa+Resurreccion+Tanay+Private+Resort/@14.5014038,121.2932321,17z/data=!3m1!4b1!4m6!3m5!1s0x3397eb0011100a93:0x1694b71a11c19b0e!8m2!3d14.5014038!4d121.2958124!16s%2Fg%2F11vjxmyzm4?entry=ttu&amp;g_ep=EgoyMDI2MDgzMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
             <span>⌖</span> Open in Google Maps
           </a>
-        </article>
-      </div>
+        </article></div>
     </div>
   </section>
 
@@ -1556,14 +1608,12 @@ section{
               <p class="party-name">Mrs. Zenaida Gambol</p>
               <p class="party-name">Mrs. Rosario Sandrin-Lopez</p>
               <p class="party-name">Mrs. Priscilla Ferrer</p>
-              <p class="party-name">Mrs. Milagros Soliva-Felipe</p>
-            </div>
+              <p class="party-name">Mrs. Milagros Soliva-Felipe</p></div>
             <div>
               <p class="party-name">Mr. Manolito Tabor</p>
               <p class="party-name">Mr. Rafael Lopez</p>
               <p class="party-name">Mr. Ramon Rulian</p>
-              <p class="party-name">Mr. Cesar Labao</p>
-            </div>
+              <p class="party-name">Mr. Cesar Labao</p></div>
           </div>
         </article>
 
@@ -1605,14 +1655,12 @@ section{
               <div class="party-role">
                 <div class="party-role-title">Candle</div>
                 <p class="party-people"><span>Gemma Leonor Miranda</span><span>Von Valuz</span></p>
-              </div>
-            </div>
+              </div></div>
             <div>
               <div class="party-role">
                 <div class="party-role-title">Cord</div>
                 <p class="party-people"><span>Genevee Rellores</span><span>Rencie Cequeña</span></p>
-              </div>
-            </div>
+              </div></div>
           </div>
         </article>
 
@@ -1620,16 +1668,13 @@ section{
           <h3>Special Roles</h3>
           <div class="party-role">
             <div class="party-role-title">Bible Bearer</div>
-            <p class="party-people">Aljor Tano</p>
-          </div>
+            <p class="party-people">Aljor Tano</p></div>
           <div class="party-role">
             <div class="party-role-title">Ring Bearer</div>
-            <p class="party-people">Kian Andrew Bernardez</p>
-          </div>
+            <p class="party-people">Kian Andrew Bernardez</p></div>
           <div class="party-role">
             <div class="party-role-title">Coin Bearer</div>
-            <p class="party-people">Jacob Lim</p>
-          </div>
+            <p class="party-people">Jacob Lim</p></div>
         </article>
 
         <article class="party-card">
@@ -1637,11 +1682,9 @@ section{
           <p class="party-name">Aneira Anwen Bernardez</p>
           <p class="party-name">Vianca Alycia Co</p>
           <p class="party-name">Adhara Cassini Valuz</p>
-        </article>
-      </div>
+        </article></div>
 
-      <p class="entourage-closing">Together with the people who make our lives a little more beautiful.</p>
-    </div>
+      <p class="entourage-closing">Together with the people who make our lives a little more beautiful.</p></div>
   </section>
 
 
@@ -1656,8 +1699,7 @@ section{
       <div class="rsvp-card">
         <div class="date-note">November 26, 2026</div>
         <h3>Your presence would mean the world to us.</h3>
-        <a class="rsvp-button" href="https://forms.gle/VHGMURXaZzYifkM47" target="_blank" rel="noopener noreferrer">💌 RSVP HERE</a>
-      </div>
+        <a class="rsvp-button" href="https://forms.gle/VHGMURXaZzYifkM47" target="_blank" rel="noopener noreferrer">💌 RSVP HERE</a></div>
     </div>
   </section>
 
@@ -1666,8 +1708,7 @@ section{
       <div class="finer-heading">
         <div class="finer-kicker">Everything you need to know</div>
         <h2>FINER DETAILS</h2>
-        <p>A few helpful details for our favorite people as we celebrate this special day together.</p>
-      </div>
+        <p>A few helpful details for our favorite people as we celebrate this special day together.</p></div>
 
       <div class="detail-section">
         <h3 class="detail-section-title">PROGRAM<span>Our Day</span></h3>
@@ -1678,8 +1719,7 @@ section{
           <div class="program-item"><div class="program-dot"></div><div class="program-time">7:00 pm</div><div class="program-name">Reception</div></div>
           <div class="program-item"><div class="program-dot"></div><div class="program-time">9:00 pm</div><div class="program-name">Send-off</div></div>
         </div>
-        <p class="program-note">We recommend arriving at least 30 minutes before the ceremony begins to allow time for seating and preparation.</p>
-      </div>
+        <p class="program-note">We recommend arriving at least 30 minutes before the ceremony begins to allow time for seating and preparation.</p></div>
 
       <div class="detail-section" id="dress-code">
         <h3 class="detail-section-title">DRESS CODE<span>Celebrate in Color</span></h3>
@@ -1688,23 +1728,19 @@ section{
             <h4>Guests Attire</h4>
             <div class="color-swatches"><span class="swatch s1"></span><span class="swatch s2"></span><span class="swatch s3"></span><span class="swatch s4"></span></div>
             <p><strong>Ladies:</strong> Long dress or colored suits in the wedding colors.</p>
-            <p style="margin-top:12px"><strong>Gentlemen:</strong> Colorful suits or long sleeves with any color pants.</p>
-          </div>
+            <p style="margin-top:12px"><strong>Gentlemen:</strong> Colorful suits or long sleeves with any color pants.</p></div>
           <div class="dress-card">
             <h4>Sponsors &amp; Family</h4>
             <p><strong>Ladies:</strong> Long dress in dark pink or purple.</p>
             <p style="margin-top:12px"><strong>Gentlemen:</strong> Black suit and pants, white long sleeves and purple ties.</p>
-            <p style="margin-top:12px">Ties will be provided by the couple.</p>
-          </div>
+            <p style="margin-top:12px">Ties will be provided by the couple.</p></div>
           <div class="dress-card">
             <h4>Adults &amp; Kids Entourage</h4>
             <p><strong>Adult Ladies:</strong> Long dress in pink shades.</p>
             <p style="margin-top:12px"><strong>Little Ladies:</strong> Dress in pink shades.</p>
             <p style="margin-top:12px"><strong>Gentlemen:</strong> Navy blue suit and pants, white long sleeves and pink tie.</p>
-            <p style="margin-top:12px"><strong>Little Gentlemen:</strong> Pink long sleeves, black pants, bowtie and suspenders.</p>
-          </div>
-        </div>
-      </div>
+            <p style="margin-top:12px"><strong>Little Gentlemen:</strong> Pink long sleeves, black pants, bowtie and suspenders.</p></div>
+        </div></div>
 
       <div class="detail-section" id="gifts">
         <h3 class="detail-section-title">GIFTS<span>With Love &amp; Gratitude</span></h3>
@@ -1712,16 +1748,13 @@ section{
           <div class="gift-card">
             <div class="gift-label">GCash</div>
             <h4>Financial Gift</h4>
-            <div class="gift-number">0977 335 0226</div>
-          </div>
+            <div class="gift-number">0977 335 0226</div></div>
           <div class="gift-card">
             <div class="gift-label">CIMB Bank</div>
             <h4>Financial Gift</h4>
-            <div class="gift-number">2086 0800 3751 28</div>
-          </div>
+            <div class="gift-number">2086 0800 3751 28</div></div>
         </div>
-        <p class="gift-copy">Your presence is our greatest gift. If you would like to bless us further, you may use either of the details above.</p>
-      </div>
+        <p class="gift-copy">Your presence is our greatest gift. If you would like to bless us further, you may use either of the details above.</p></div>
 
       <div class="detail-section" id="faq">
         <h3 class="detail-section-title">FAQS<span>Helpful Answers</span></h3>
@@ -1731,14 +1764,12 @@ section{
           <div class="faq-item"><button class="faq-question" type="button"><span>What time should I arrive?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div><p>We recommend arriving at least 30 minutes before the ceremony begins to allow time for seating and preparation.</p></div></div></div>
           <div class="faq-item"><button class="faq-question" type="button"><span>What is the deadline for RSVP?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div><p>Kindly respond by October 17, 2026. Your early reply helps us ensure the best experience for everyone.</p></div></div></div>
           <div class="faq-item"><button class="faq-question" type="button"><span>Is parking available?</span><span class="faq-icon">+</span></button><div class="faq-answer"><div><p>Yes. Parking spaces are available at both the Church and Reception Venue for all invited guests. Please indicate your plate number in the RSVP form for proper coordination.</p></div></div></div>
-        </div>
-      </div>
+        </div></div>
 
       <div class="detail-callout">
         <strong>We Can't Wait to Celebrate With You</strong>
         Thank you for being part of our story and for sharing this beautiful day with us.
-      </div>
-    </div>
+      </div></div>
   </section>
 <footer>Made with love • Neil &amp; Anj</footer>
 </main>
@@ -1954,22 +1985,28 @@ document.querySelectorAll('.faq-question').forEach(function(button){
         <div class="memory-step">
           <div class="memory-number">01</div>
           <h3>Capture</h3>
-          <p>Take photos and videos of the little and big moments throughout our celebration.</p>
-        </div>
+          <p>Take photos and videos of the little and big moments throughout our celebration.</p></div>
         <div class="memory-step">
           <div class="memory-number">02</div>
           <h3>Choose</h3>
-          <p>Pick your favorite memories that you would love for us to see and keep.</p>
-        </div>
+          <p>Pick your favorite memories that you would love for us to see and keep.</p></div>
         <div class="memory-step">
           <div class="memory-number">03</div>
           <h3>Share</h3>
-          <p>Upload your photos and videos directly to our shared wedding memory folder.</p>
-        </div>
+          <p>Upload your photos and videos directly to our shared wedding memory folder.</p></div>
       </div>
 
-      <a class="memory-button" href="https://drive.google.com/drive/folders/1hriDFNjOYqcSQA5Ig8RD2fbZqntknQ7M" target="_blank" rel="noopener noreferrer">📸 UPLOAD YOUR PHOTOS &amp; VIDEOS</a>
-    </div>
+      <a class="memory-button" href="https://drive.google.com/drive/folders/1hriDFNjOYqcSQA5Ig8RD2fbZqntknQ7M" target="_blank" rel="noopener noreferrer">📸 UPLOAD YOUR PHOTOS &amp; VIDEOS</a></div>
+  </section>
+
+  <!-- SPECIAL ENDING -->
+  <section class="special-ending-section" id="ending">
+    <div class="special-ending-inner">
+      <div class="ending-kicker">A new chapter begins</div>
+      <h2>AND SO THE<br>ADVENTURE BEGINS...</h2>
+      <div class="ending-date">November 26, 2026</div>
+      <p class="ending-message">One beautiful day, one unforgettable promise, and a lifetime of adventures waiting to unfold.</p>
+      <div class="ending-heart">♡</div></div>
   </section>
 </body>
 </html>
