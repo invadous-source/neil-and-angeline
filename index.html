@@ -1144,6 +1144,63 @@ section{
   .reveal.reveal-left.is-visible,.reveal.reveal-right.is-visible{transform:translateY(0)}
 }
 
+
+/* RSVP & GUEST PHOTO UPLOAD */
+.rsvp-actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px;
+  margin-top:24px;
+}
+.rsvp-link,.guest-upload-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:54px;
+  padding:0 26px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:.04em;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.rsvp-link{
+  background:#a77d58;
+  color:#fff!important;
+  box-shadow:0 12px 26px rgba(120,82,52,.22);
+}
+.guest-upload-link{
+  background:#fffdfa;
+  color:#8c684b!important;
+  border:1px solid rgba(167,125,88,.42);
+  box-shadow:0 10px 24px rgba(95,72,57,.08);
+}
+.rsvp-link:hover,.guest-upload-link:hover{
+  transform:translateY(-4px);
+  box-shadow:0 17px 32px rgba(95,72,57,.18);
+}
+.guest-upload-card{
+  max-width:760px;
+  margin:28px auto 0;
+  padding:24px 28px;
+  text-align:center;
+  background:rgba(255,253,250,.76);
+  border:1px solid rgba(178,138,105,.25);
+}
+.guest-upload-card strong{
+  display:block;
+  margin-bottom:6px;
+  color:#625b57;
+  font-size:1.05rem;
+}
+.guest-upload-card p{margin:0;color:#82736e;line-height:1.7}
+@media(max-width:600px){
+  .rsvp-actions{flex-direction:column;align-items:stretch}
+  .rsvp-link,.guest-upload-link{width:100%;padding:0 18px}
+}
+
 </style>
 </head>
 <body>
@@ -1183,6 +1240,7 @@ section{
       <a href="#dress-code">Dress Code</a>
       <a href="#gifts">Gifts</a>
       <a href="#faq">FAQ</a>
+      <a href="#rsvp">RSVP</a>
     </div>
   </nav>
 
@@ -1586,6 +1644,24 @@ section{
       <div class="detail-callout">
         <strong>We Can't Wait to Celebrate With You</strong>
         Thank you for being part of our story and for sharing this beautiful day with us.
+      </div>
+    </div>
+  </section>
+
+  <section class="finer-details-section" id="rsvp">
+    <div class="finer-details-inner">
+      <div class="finer-heading">
+        <div class="finer-kicker">Be part of our special day</div>
+        <h2>JOIN THE CELEBRATION</h2>
+        <p>Please let us know if you can celebrate with us, and help us capture more beautiful memories during the wedding.</p>
+        <div class="rsvp-actions">
+          <a class="rsvp-link" href="https://forms.gle/VHGMURXaZzYifkM47" target="_blank" rel="noopener noreferrer">💌 RSVP HERE</a>
+          <a class="guest-upload-link" href="https://drive.google.com/drive/folders/1hriDFNjOYqcSQA5Ig8RD2fbZqntknQ7M" target="_blank" rel="noopener noreferrer">📸 SHARE YOUR EVENT PHOTOS</a>
+        </div>
+        <div class="guest-upload-card">
+          <strong>Capture a moment? Share it with us! 📸</strong>
+          <p>Guests can upload their photos and videos from the wedding event so we can keep every beautiful memory together.</p>
+        </div>
       </div>
     </div>
   </section>
