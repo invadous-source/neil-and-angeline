@@ -1145,60 +1145,137 @@ section{
 }
 
 
-/* RSVP & GUEST PHOTO UPLOAD */
-.rsvp-actions{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:16px;
-  margin-top:24px;
+
+
+/* RSVP & GUEST MEMORY GALLERY */
+.rsvp-section,
+.memory-upload-section{
+  position:relative;
+  padding:100px 7vw;
+  overflow:hidden;
 }
-.rsvp-link,.guest-upload-link{
+.rsvp-section{
+  background:linear-gradient(135deg,#fffaf6 0%,#f5ece5 50%,#fffaf8 100%);
+}
+.memory-upload-section{
+  background:linear-gradient(180deg,#fffdfb 0%,#f7f2ee 100%);
+}
+.rsvp-inner,.memory-upload-inner{
+  max-width:980px;
+  margin:0 auto;
+  text-align:center;
+}
+.rsvp-kicker,.memory-kicker{
+  color:#ad845e;
+  font-size:.72rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.rsvp-inner h2,.memory-upload-inner h2{
+  margin:0;
+  color:#5b5653;
+  font-size:clamp(2.5rem,5vw,4.3rem);
+  font-weight:400;
+  letter-spacing:.07em;
+}
+.rsvp-inner>p,.memory-upload-inner>p{
+  max-width:650px;
+  margin:18px auto 0;
+  color:#81736d;
+  line-height:1.8;
+}
+.rsvp-card{
+  max-width:620px;
+  margin:38px auto 0;
+  padding:38px 34px;
+  background:rgba(255,255,255,.75);
+  border:1px solid rgba(178,138,105,.28);
+  box-shadow:0 18px 45px rgba(95,72,57,.10);
+}
+.rsvp-card .date-note{
+  color:#a67b57;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:2rem;
+  margin-bottom:10px;
+}
+.rsvp-card h3{
+  margin:0;
+  color:#625b57;
+  font-size:1.55rem;
+  font-weight:400;
+}
+.rsvp-button,.memory-button{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
-  min-height:54px;
-  padding:0 26px;
+  min-height:55px;
+  margin-top:25px;
+  padding:0 32px;
   border-radius:999px;
   text-decoration:none;
   font-weight:600;
-  letter-spacing:.04em;
-  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  letter-spacing:.05em;
+  transition:transform .25s ease,box-shadow .25s ease;
 }
-.rsvp-link{
+.rsvp-button{
   background:#a77d58;
   color:#fff!important;
   box-shadow:0 12px 26px rgba(120,82,52,.22);
 }
-.guest-upload-link{
-  background:#fffdfa;
-  color:#8c684b!important;
-  border:1px solid rgba(167,125,88,.42);
-  box-shadow:0 10px 24px rgba(95,72,57,.08);
-}
-.rsvp-link:hover,.guest-upload-link:hover{
+.rsvp-button:hover,.memory-button:hover{
   transform:translateY(-4px);
-  box-shadow:0 17px 32px rgba(95,72,57,.18);
+  box-shadow:0 18px 34px rgba(95,72,57,.18);
 }
-.guest-upload-card{
-  max-width:760px;
-  margin:28px auto 0;
-  padding:24px 28px;
-  text-align:center;
-  background:rgba(255,253,250,.76);
-  border:1px solid rgba(178,138,105,.25);
+.memory-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin:42px auto 0;
+  max-width:920px;
 }
-.guest-upload-card strong{
-  display:block;
-  margin-bottom:6px;
+.memory-step{
+  padding:28px 20px;
+  background:#fffdfa;
+  border:1px solid rgba(178,138,105,.24);
+  box-shadow:0 12px 30px rgba(95,72,57,.07);
+}
+.memory-step .memory-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  margin:0 auto 14px;
+  border-radius:50%;
+  border:1px solid rgba(178,138,105,.55);
+  color:#a77d58;
+  font-size:.78rem;
+  letter-spacing:.08em;
+}
+.memory-step h3{
+  margin:0 0 9px;
   color:#625b57;
   font-size:1.05rem;
+  letter-spacing:.04em;
 }
-.guest-upload-card p{margin:0;color:#82736e;line-height:1.7}
-@media(max-width:600px){
-  .rsvp-actions{flex-direction:column;align-items:stretch}
-  .rsvp-link,.guest-upload-link{width:100%;padding:0 18px}
+.memory-step p{
+  margin:0;
+  color:#81736d;
+  line-height:1.65;
+  font-size:.92rem;
+}
+.memory-button{
+  background:#fffdfa;
+  color:#8c684b!important;
+  border:1px solid rgba(167,125,88,.45);
+  box-shadow:0 10px 24px rgba(95,72,57,.08);
+}
+@media(max-width:720px){
+  .rsvp-section,.memory-upload-section{padding:78px 20px}
+  .memory-grid{grid-template-columns:1fr}
+  .rsvp-card{padding:30px 20px}
+  .rsvp-button,.memory-button{width:100%;padding:0 18px}
 }
 
 </style>
@@ -1241,6 +1318,7 @@ section{
       <a href="#gifts">Gifts</a>
       <a href="#faq">FAQ</a>
       <a href="#rsvp">RSVP</a>
+      <a href="#guest-gallery">Gallery</a>
     </div>
   </nav>
 
@@ -1568,7 +1646,22 @@ section{
 
 
   <!-- WEDDING FINER DETAILS -->
-  <section class="finer-details-section" id="program">
+  
+  <!-- RSVP -->
+  <section class="rsvp-section" id="rsvp">
+    <div class="rsvp-inner">
+      <div class="rsvp-kicker">Please let us know</div>
+      <h2>WILL YOU JOIN US?</h2>
+      <p>We would be honored to celebrate our special day with you. Kindly let us know if you will be joining us.</p>
+      <div class="rsvp-card">
+        <div class="date-note">November 26, 2026</div>
+        <h3>Your presence would mean the world to us.</h3>
+        <a class="rsvp-button" href="https://forms.gle/VHGMURXaZzYifkM47" target="_blank" rel="noopener noreferrer">💌 RSVP HERE</a>
+      </div>
+    </div>
+  </section>
+
+<section class="finer-details-section" id="program">
     <div class="finer-details-inner">
       <div class="finer-heading">
         <div class="finer-kicker">Everything you need to know</div>
@@ -1647,27 +1740,7 @@ section{
       </div>
     </div>
   </section>
-
-  <section class="finer-details-section" id="rsvp">
-    <div class="finer-details-inner">
-      <div class="finer-heading">
-        <div class="finer-kicker">Be part of our special day</div>
-        <h2>JOIN THE CELEBRATION</h2>
-        <p>Please let us know if you can celebrate with us, and help us capture more beautiful memories during the wedding.</p>
-        <div class="rsvp-actions">
-          <a class="rsvp-link" href="https://forms.gle/VHGMURXaZzYifkM47" target="_blank" rel="noopener noreferrer">💌 RSVP HERE</a>
-          <a class="guest-upload-link" href="https://drive.google.com/drive/folders/1hriDFNjOYqcSQA5Ig8RD2fbZqntknQ7M" target="_blank" rel="noopener noreferrer">📸 SHARE YOUR EVENT PHOTOS</a>
-        </div>
-        <div class="guest-upload-card">
-          <strong>Capture a moment? Share it with us! 📸</strong>
-          <p>Guests can upload their photos and videos from the wedding event so we can keep every beautiful memory together.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <footer>Made with love • Neil &amp; Anj</footer>
+<footer>Made with love • Neil &amp; Anj</footer>
 </main>
 
 <script>
@@ -1869,5 +1942,34 @@ document.querySelectorAll('.faq-question').forEach(function(button){
 })();
 </script>
 
+
+  <!-- GUEST MEMORY GALLERY -->
+  <section class="memory-upload-section" id="guest-gallery">
+    <div class="memory-upload-inner">
+      <div class="memory-kicker">Help us keep every memory</div>
+      <h2>SHARE THE MOMENTS</h2>
+      <p>Captured something beautiful during our wedding? Share your favorite photos and videos with us so we can remember the day through everyone's eyes.</p>
+
+      <div class="memory-grid">
+        <div class="memory-step">
+          <div class="memory-number">01</div>
+          <h3>Capture</h3>
+          <p>Take photos and videos of the little and big moments throughout our celebration.</p>
+        </div>
+        <div class="memory-step">
+          <div class="memory-number">02</div>
+          <h3>Choose</h3>
+          <p>Pick your favorite memories that you would love for us to see and keep.</p>
+        </div>
+        <div class="memory-step">
+          <div class="memory-number">03</div>
+          <h3>Share</h3>
+          <p>Upload your photos and videos directly to our shared wedding memory folder.</p>
+        </div>
+      </div>
+
+      <a class="memory-button" href="https://drive.google.com/drive/folders/1hriDFNjOYqcSQA5Ig8RD2fbZqntknQ7M" target="_blank" rel="noopener noreferrer">📸 UPLOAD YOUR PHOTOS &amp; VIDEOS</a>
+    </div>
+  </section>
 </body>
 </html>
