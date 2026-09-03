@@ -852,6 +852,145 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
   .story-photo{max-width:500px;padding:8px}
   .story-text{font-size:1.24rem}
 }
+
+/* ADDITIONAL WEDDING DETAILS */
+.wedding-details-section{
+  padding:105px 7vw;
+  background:
+    radial-gradient(circle at 8% 20%,rgba(255,184,121,.13),transparent 22%),
+    radial-gradient(circle at 90% 80%,rgba(224,113,173,.08),transparent 25%),
+    #fffaf6;
+  position:relative;
+  overflow:hidden;
+}
+.wedding-details-inner{
+  max-width:1160px;
+  margin:0 auto;
+}
+.details-heading{
+  text-align:center;
+  margin-bottom:58px;
+}
+.details-heading .details-kicker{
+  color:#b58c67;
+  font-size:.72rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.details-heading h2{
+  margin:0;
+  color:#5b5654;
+  font-size:clamp(2.4rem,5vw,4.3rem);
+  font-weight:400;
+  letter-spacing:.06em;
+}
+.details-heading p{
+  max-width:650px;
+  margin:18px auto 0;
+  color:#857772;
+  line-height:1.8;
+}
+.details-block{
+  margin-top:76px;
+  padding-top:20px;
+}
+.details-block-title{
+  text-align:center;
+  margin:0 0 34px;
+  color:#635b57;
+  font-size:clamp(1.7rem,3vw,2.6rem);
+  font-weight:400;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.details-block-title::after{
+  content:"";
+  display:block;
+  width:62px;
+  height:2px;
+  margin:16px auto 0;
+  background:linear-gradient(90deg,#f5c55f,#ef8b7b,#c95fb7);
+}
+.details-image-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:26px;
+}
+.details-image-card{
+  position:relative;
+  padding:9px;
+  background:#fff;
+  border:1px solid rgba(179,139,112,.28);
+  box-shadow:0 18px 40px rgba(91,67,54,.12);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.details-image-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 25px 52px rgba(91,67,54,.18);
+}
+.details-image-card img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.details-feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:32px;
+  max-width:900px;
+  margin:0 auto;
+}
+.details-feature-card{
+  position:relative;
+  padding:12px;
+  background:#fff;
+  border:1px solid rgba(179,139,112,.28);
+  box-shadow:0 18px 42px rgba(91,67,54,.12);
+}
+.details-feature-card img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.location-card{
+  max-width:760px;
+  margin:0 auto;
+  padding:12px;
+  background:#fff;
+  border:1px solid rgba(179,139,112,.32);
+  box-shadow:0 18px 42px rgba(91,67,54,.13);
+}
+.location-card img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.details-reminder{
+  max-width:700px;
+  margin:45px auto 0;
+  padding:28px 32px;
+  text-align:center;
+  border:1px solid rgba(195,143,107,.35);
+  background:rgba(255,255,255,.68);
+  color:#796b65;
+  line-height:1.8;
+  box-shadow:0 12px 30px rgba(91,67,54,.07);
+}
+.details-reminder strong{
+  display:block;
+  color:#a77b58;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+@media(max-width:850px){
+  .wedding-details-section{padding:82px 20px}
+  .details-image-grid{grid-template-columns:1fr;max-width:500px;margin:0 auto}
+  .details-feature-grid{grid-template-columns:1fr;max-width:500px}
+  .details-block{margin-top:58px}
+}
+
 </style>
 </head>
 <body>
@@ -887,6 +1026,9 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
       <a href="#our-story">Our Story</a>
       <a href="#venues">Venues</a>
       <a href="#entourage">Entourage</a>
+      <a href="#dress-code">Dress Code</a>
+      <a href="#gifts">Gifts</a>
+      <a href="#faq">FAQ</a>
     </div>
   </nav>
 
@@ -1211,6 +1353,53 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
       <p class="entourage-closing">Together with the people who make our lives a little more beautiful.</p>
     </div>
   </section>
+
+  <!-- ADDITIONAL WEDDING DETAILS -->
+  <section class="wedding-details-section" id="dress-code">
+    <div class="wedding-details-inner">
+      <div class="details-heading">
+        <div class="details-kicker">Everything you need to know</div>
+        <h2>WEDDING DETAILS</h2>
+        <p>We have added the remaining details from our invitation so everything is easy to find in one place.</p>
+      </div>
+
+      <div class="details-block">
+        <h3 class="details-block-title">Dress Code &amp; Colors</h3>
+        <div class="details-image-grid">
+          <div class="details-image-card"><img src="5.png" alt="Dress code and wedding colors"></div>
+          <div class="details-image-card"><img src="6.png" alt="Ladies dress code"></div>
+          <div class="details-image-card"><img src="7.png" alt="Ladies and gentlemen dress code"></div>
+        </div>
+      </div>
+
+      <div class="details-block" id="gifts">
+        <h3 class="details-block-title">Financial Gifts</h3>
+        <div class="details-feature-grid">
+          <div class="details-feature-card"><img src="8.png" alt="Financial gift details"></div>
+          <div class="details-feature-card"><img src="9.png" alt="Gift registry details"></div>
+        </div>
+        <div class="details-reminder">
+          <strong>Your Presence Is Our Greatest Gift</strong>
+          If you would like to bless us further, our financial gift and registry details are available above.
+        </div>
+      </div>
+
+      <div class="details-block" id="location">
+        <h3 class="details-block-title">Location Guide</h3>
+        <div class="location-card">
+          <img src="10.png" alt="Wedding location map and directions">
+        </div>
+      </div>
+
+      <div class="details-block" id="faq">
+        <h3 class="details-block-title">Frequently Asked Questions</h3>
+        <div class="location-card">
+          <img src="11.png" alt="Frequently asked questions">
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <footer>Made with love • Neil &amp; Anj</footer>
 </main>
