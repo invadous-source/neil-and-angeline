@@ -593,6 +593,152 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
   .party-name{font-size:.98rem}
 }
 
+
+/* OUR LOVE STORY */
+.love-story-section{
+  position:relative;
+  padding:105px 7vw 120px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 10% 12%,rgba(238,173,190,.14),transparent 24%),
+    radial-gradient(circle at 90% 88%,rgba(216,173,134,.10),transparent 26%),
+    linear-gradient(180deg,#fffdfc 0%,#f8f7f7 100%);
+}
+.love-story-section::before{
+  content:"";
+  position:absolute;
+  inset:45px 8vw auto;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(132,104,91,.18),transparent);
+}
+.love-story-inner{
+  position:relative;
+  z-index:1;
+  max-width:1120px;
+  margin:0 auto;
+}
+.love-story-heading{
+  text-align:center;
+  margin-bottom:78px;
+}
+.love-story-heading .story-kicker{
+  margin:0 0 12px;
+  color:#a98976;
+  font-size:.68rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+}
+.love-story-heading h2{
+  margin:0;
+  color:#5c5a5a;
+  font-size:clamp(2.7rem,6vw,4.8rem);
+  font-weight:400;
+  letter-spacing:.05em;
+}
+.love-story-heading p{
+  max-width:590px;
+  margin:16px auto 0;
+  color:#8a7b76;
+  font-size:.96rem;
+  line-height:1.8;
+}
+.story-list{
+  display:flex;
+  flex-direction:column;
+  gap:72px;
+}
+.story-item{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(360px,1fr);
+  align-items:center;
+  gap:72px;
+}
+.story-item.reverse{
+  grid-template-columns:minmax(360px,1fr) minmax(0,1fr);
+}
+.story-item.reverse .story-copy{order:2}
+.story-item.reverse .story-photo{order:1}
+.story-copy{
+  text-align:center;
+  padding:22px 10px;
+}
+.story-title{
+  margin:0;
+  color:#5d5c5c;
+  font-size:clamp(2rem,4vw,3.05rem);
+  line-height:1.08;
+  letter-spacing:.06em;
+  font-weight:400;
+  text-transform:uppercase;
+}
+.story-date{
+  margin:14px 0 10px;
+  color:#9b7d56;
+  font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:clamp(2rem,4vw,3.2rem);
+  line-height:1;
+  font-weight:400;
+}
+.story-text{
+  max-width:510px;
+  margin:0 auto;
+  color:#5e5e5e;
+  font-size:clamp(1.2rem,2.25vw,1.8rem);
+  line-height:1.28;
+  letter-spacing:.01em;
+}
+.story-photo{
+  position:relative;
+  width:100%;
+  max-width:440px;
+  justify-self:center;
+  background:#fff;
+  box-shadow:0 18px 45px rgba(85,72,68,.10);
+  overflow:hidden;
+}
+.story-photo img{
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+.story-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(255,255,255,.65);
+  pointer-events:none;
+}
+.story-item:hover .story-photo{
+  transform:translateY(-4px);
+  transition:transform .3s ease;
+}
+.story-note{
+  margin:70px auto 0;
+  text-align:center;
+  color:#9a8580;
+  font-size:.78rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+@media(max-width:820px){
+  .love-story-section{padding:80px 20px 90px}
+  .love-story-heading{margin-bottom:52px}
+  .story-list{gap:56px}
+  .story-item,
+  .story-item.reverse{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+  .story-item.reverse .story-copy,
+  .story-item.reverse .story-photo{
+    order:initial;
+  }
+  .story-copy{padding:0 8px}
+  .story-photo{max-width:520px}
+  .story-text{font-size:1.28rem}
+}
+
 </style>
 </head>
 <body>
@@ -625,6 +771,7 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#save-date">Save the Date</a>
+      <a href="#our-story">Our Story</a>
       <a href="#venues">Venues</a>
       <a href="#entourage">Entourage</a>
     </div>
@@ -704,6 +851,88 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
         </div>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- OUR LOVE STORY -->
+  <section class="love-story-section" id="our-story">
+    <div class="love-story-inner">
+      <div class="love-story-heading">
+        <p class="story-kicker">A little look back at us</p>
+        <h2>OUR LOVE STORY</h2>
+        <p>From our first meeting to the beautiful moments that led us here, these are some of the memories we will always treasure.</p>
+      </div>
+
+      <div class="story-list">
+        <article class="story-item">
+          <div class="story-copy">
+            <h3 class="story-title">THE PROPOSAL</h3>
+            <div class="story-date">Nov 16, 2024</div>
+            <p class="story-text">After our Anniversary celebration inside the car, the proposal ring was given &amp; accepted to signify the next level of our relationship.</p>
+          </div>
+          <div class="story-photo">
+            <img src="story1.png" alt="The proposal">
+          </div>
+        </article>
+
+        <article class="story-item reverse">
+          <div class="story-copy">
+            <h3 class="story-title">FIRST FLIGHT</h3>
+            <div class="story-date">March 2026</div>
+            <p class="story-text">In the blue waters of Bohol, a side trip in a friend's wedding, our first and last trip as before we tie the knot.</p>
+          </div>
+          <div class="story-photo">
+            <img src="story2.png" alt="First flight and Bohol trip">
+          </div>
+        </article>
+
+        <article class="story-item">
+          <div class="story-copy">
+            <h3 class="story-title">OUR WEDDING DAY</h3>
+            <div class="story-date">Nov 26, 2026</div>
+            <p class="story-text">In front of God, with our family and close friends, we will begin our life together.</p>
+          </div>
+          <div class="story-photo">
+            <img src="story3.png" alt="Our wedding day">
+          </div>
+        </article>
+
+        <article class="story-item reverse">
+          <div class="story-copy">
+            <h3 class="story-title">FIRST MEET</h3>
+            <div class="story-date">2020</div>
+            <p class="story-text">Our first meeting in the scenic view of Art Sector</p>
+          </div>
+          <div class="story-photo">
+            <img src="story4.png" alt="First meeting">
+          </div>
+        </article>
+
+        <article class="story-item">
+          <div class="story-copy">
+            <h3 class="story-title">FIRST TRIP</h3>
+            <div class="story-date">Oct 2020</div>
+            <p class="story-text">Our first adventure together. Start of many places and a lot of memories</p>
+          </div>
+          <div class="story-photo">
+            <img src="story5.png" alt="First trip together">
+          </div>
+        </article>
+
+        <article class="story-item reverse">
+          <div class="story-copy">
+            <h3 class="story-title">FIRST DAY IN RELATIONSHIP</h3>
+            <div class="story-date">Nov 14, 2020</div>
+            <p class="story-text">During lunchtime with a Paint by Numbers photo of us, we became together officially.</p>
+          </div>
+          <div class="story-photo">
+            <img src="story6.png" alt="First day in relationship">
+          </div>
+        </article>
+      </div>
+
+      <p class="story-note">And the best chapters are still waiting to be written ♡</p>
     </div>
   </section>
 
