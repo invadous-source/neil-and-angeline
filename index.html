@@ -1542,12 +1542,7 @@ body.invitation-welcomed #invitation .open-invitation-btn{opacity:0;pointer-even
   transition:transform .25s ease,box-shadow .25s ease,opacity .3s ease;
 }
 .open-invitation-btn:hover{transform:translateY(-3px);box-shadow:0 18px 32px rgba(131,65,84,.3)}
-.intro-music-btn,.skip-intro-btn{
-  margin-top:12px;border:0;background:transparent;color:#936974;cursor:pointer;
-  font:inherit;font-size:.73rem;letter-spacing:.08em;
-}
-.intro-music-btn{position:absolute;left:18px;bottom:18px;padding:9px 12px;border:1px solid rgba(172,102,121,.22);border-radius:999px;background:rgba(255,255,255,.34);backdrop-filter:blur(8px)}
-.skip-intro-btn{margin-top:11px}
+.intro-music-btn,.intro-music-btn{position:absolute;left:18px;bottom:18px;padding:9px 12px;border:1px solid rgba(172,102,121,.22);border-radius:999px;background:rgba(255,255,255,.34);backdrop-filter:blur(8px)}
 .intro-welcome{
   position:absolute;left:50%;top:50%;width:min(90vw,520px);transform:translate(-50%,-42%);
   opacity:0;pointer-events:none;text-align:center;transition:opacity .7s ease,transform .7s ease;
@@ -1559,8 +1554,7 @@ body.invitation-welcomed #invitation .open-invitation-btn{opacity:0;pointer-even
 .invitation-wrap.opening>.intro-kicker,
 .invitation-wrap.opening>.youre-invited,
 .invitation-wrap.opening>.open-invitation-btn,
-.invitation-wrap.opening>.skip-intro-btn{opacity:0;pointer-events:none;transition:opacity .4s ease}
-
+.invitation-wrap.opening>
 .sparkles span{position:absolute;color:#e5b574;animation:sparkle 2.8s ease-in-out infinite}
 .sparkles span:nth-child(1){left:12%;top:18%;animation-delay:.1s}.sparkles span:nth-child(2){left:22%;bottom:17%;animation-delay:.8s}
 .sparkles span:nth-child(3){right:14%;top:23%;animation-delay:1.2s}.sparkles span:nth-child(4){right:20%;bottom:13%;animation-delay:1.8s}
@@ -1719,7 +1713,7 @@ body.intro-welcome-mode .intro-welcome{z-index:20}
   </div>
 
   <div class="invitation-wrap">
-    <div class="intro-kicker">TOGETHER WITH THEIR FAMILIES</div>
+    <div class="intro-kicker">A LOVE STORY IS ABOUT TO UNFOLD</div>
     <div class="youre-invited">You’re Invited</div><div class="intro-subline">TO CELEBRATE A LOVE MADE FOR FOREVER</div>
 
     <div class="envelope-stage" id="envelopeButton" role="button" tabindex="0" aria-label="Open invitation">
@@ -1746,7 +1740,6 @@ body.intro-welcome-mode .intro-welcome{z-index:20}
 
     <button class="open-invitation-btn" id="openInvitationBtn" type="button">♡ OPEN INVITATION</button>
     <button class="intro-music-btn" id="introMusicBtn" type="button" aria-label="Toggle opening music">♫ <span>Music</span></button>
-    <button class="skip-intro-btn" id="skipInvitationBtn" type="button">Skip intro →</button>
 
     <div class="intro-welcome" id="introWelcome">
       <div class="welcome-heart">♥</div>
@@ -2149,7 +2142,6 @@ body.intro-welcome-mode .intro-welcome{z-index:20}
 <script>
 const envelope = document.getElementById('envelopeButton');
 const openInvitationButton = document.getElementById('openInvitationButton');
-const skipInvitation = document.getElementById('skipInvitation');
 let opened = false;
 
 const music = document.getElementById('weddingMusic');
@@ -2235,11 +2227,6 @@ function openInvitation(){
   }, 3850);
 }
 
-function skipInvitation(){
-  if(opened) return;
-  opened = true;
-  document.body.classList.add('entered');
-}
 
 envelope.addEventListener('click', openInvitation);
 envelope.addEventListener('keydown', e => {
@@ -2250,11 +2237,9 @@ envelope.addEventListener('keydown', e => {
 });
 
 const openInvitationBtn = document.getElementById('openInvitationBtn');
-const skipInvitationBtn = document.getElementById('skipInvitationBtn');
 const introMusicBtn = document.getElementById('introMusicBtn');
 
 if(openInvitationBtn) openInvitationBtn.addEventListener('click', openInvitation);
-if(skipInvitationBtn) skipInvitationBtn.addEventListener('click', skipInvitation);
 
 if(introMusicBtn){
   introMusicBtn.addEventListener('click', async () => {
