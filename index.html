@@ -1718,7 +1718,7 @@ body{background:#fff9f6}
 }
 
 /* =========================================================
-   FINAL EXPERIENCE POLISH — OPENING, PHOTO FRAMES, LIGHTBOX & PETALS
+   FINAL EXPERIENCE POLISH — OPENING, PHOTO FRAMES & PETALS
    ========================================================= */
 /* Make the opening invitation feel tactile and intentional. */
 #invitation .invitation-wrap{animation:openingBreath 5s ease-in-out infinite;}
@@ -1732,26 +1732,9 @@ body{background:#fff9f6}
 .envelope-stage.open .memory-3{transform:translate(104px,-162px) rotate(13deg) scale(.94);}
 .envelope-stage.open .memory{box-shadow:0 24px 42px rgba(143,70,91,.24),0 0 0 4px rgba(255,255,255,.35);}
 
-/* Story photos: editorial frames with a clear click affordance. */
-.story-photo{position:relative;cursor:zoom-in;isolation:isolate;}
-.story-photo::after{content:'VIEW';position:absolute;right:18px;bottom:17px;z-index:2;padding:7px 10px;border:1px solid rgba(255,255,255,.72);border-radius:999px;background:rgba(75,43,51,.42);backdrop-filter:blur(6px);color:#fff;font-family:Arial,sans-serif;font-size:.55rem;letter-spacing:.16em;opacity:0;transform:translateY(5px);transition:opacity .3s ease,transform .3s ease;}
-.story-photo:hover::after,.story-photo:focus-within::after{opacity:1;transform:none;}
-.story-photo img{display:block;width:100%;border-radius:2px;}
-.story-photo:focus-visible{outline:2px solid #b65f78;outline-offset:5px;}
-
-/* Full-screen wedding photo lightbox. */
-#weddingLightbox{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:28px;background:rgba(48,31,37,.84);backdrop-filter:blur(14px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s ease,visibility .35s ease;}
-#weddingLightbox.is-open{opacity:1;visibility:visible;pointer-events:auto;}
-.lightbox-panel{position:relative;width:min(92vw,900px);height:min(88vh,820px);display:grid;place-items:center;}
-.lightbox-image{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:4px;box-shadow:0 28px 80px rgba(0,0,0,.38);transform:scale(.96);transition:transform .35s ease;}
-#weddingLightbox.is-open .lightbox-image{transform:scale(1);}
-.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;z-index:2;border:1px solid rgba(255,255,255,.42);background:rgba(255,250,247,.14);color:#fff;width:46px;height:46px;border-radius:50%;cursor:pointer;backdrop-filter:blur(10px);transition:background .2s ease,transform .2s ease;}
-.lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{background:rgba(255,255,255,.24);transform:scale(1.05);}
-.lightbox-close{top:-4px;right:-4px;font-size:1.3rem;}
-.lightbox-prev{left:-58px;top:50%;transform:translateY(-50%);}
-.lightbox-next{right:-58px;top:50%;transform:translateY(-50%);}
-.lightbox-prev:hover,.lightbox-next:hover{transform:translateY(-50%) scale(1.05);}
-.lightbox-caption{position:absolute;left:50%;bottom:-4px;transform:translateX(-50%);padding:9px 14px;border-radius:999px;background:rgba(45,28,34,.45);color:#fff;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;}
+/* Story photos: refined editorial frames. */
+.story-photo{position:relative;isolation:isolate;}
+.story-photo img{display:block;width:100%;border-radius:4px;}
 
 /* Floating wedding details — intentionally subtle. */
 .floating-details{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden;opacity:0;transition:opacity 1s ease;}
@@ -1766,18 +1749,139 @@ body.entered .floating-details{opacity:1;}
   .envelope-stage.open .memory-1{transform:translate(-58px,-128px) rotate(-11deg) scale(.88);}
   .envelope-stage.open .memory-2{transform:translate(-50%,-168px) rotate(0deg) scale(.94);}
   .envelope-stage.open .memory-3{transform:translate(58px,-128px) rotate(11deg) scale(.88);}
-  .lightbox-panel{width:94vw;height:82vh;}
-  .lightbox-prev,.lightbox-next{width:40px;height:40px;top:auto;bottom:-2px;}
-  .lightbox-prev{left:calc(50% - 48px);transform:translateX(-50%);}
-  .lightbox-next{right:calc(50% - 48px);transform:translateX(50%);}
-  .lightbox-prev:hover,.lightbox-next:hover{transform:translateX(-50%) scale(1.05);}
-  .lightbox-next:hover{transform:translateX(50%) scale(1.05);}
-  .lightbox-close{top:5px;right:5px;}
-  .lightbox-caption{bottom:52px;max-width:82vw;overflow:hidden;text-overflow:ellipsis;}
 }
 @media(prefers-reduced-motion:reduce){
   #invitation .invitation-wrap,.floating-petal,.floating-spark{animation:none!important;}
 }
+
+/* =========================================================
+   FINAL COLOR + PHOTO POLISH — SOFT BLUSH WEDDING PALETTE
+   ========================================================= */
+:root{
+  --blush:#f3b6c4;
+  --rose:#d97891;
+  --rose-dark:#9b4d63;
+  --rose-deep:#7e3f53;
+  --pink-light:#fbe8ed;
+  --pink-pale:#fff7f9;
+  --cream:#fffaf8;
+  --champagne:#d7b08a;
+  --ink:#5b444a;
+  --soft-border:rgba(205,112,137,.18);
+  --soft-shadow:rgba(126,63,83,.10);
+}
+body{color:var(--ink);background:var(--cream);}
+
+/* Consistent pink-touched surfaces */
+.love-story-section,
+.venues-section,
+.entourage-section,
+.finer-details-section,
+.rsvp-section,
+.faq-section,
+.memory-upload-section,
+.special-ending-section{
+  background:
+    radial-gradient(circle at 8% 15%,rgba(245,187,201,.13),transparent 25%),
+    radial-gradient(circle at 92% 78%,rgba(226,145,166,.10),transparent 27%),
+    linear-gradient(180deg,#fffaf9 0%,#fff7f8 52%,#fffaf9 100%);
+}
+
+.love-story-heading h2,
+.section-heading h2,
+.entourage-heading h2,
+.finer-heading h2,
+.detail-section-title,
+.special-ending-section h2{color:var(--rose-deep)!important;}
+.love-story-heading .story-kicker,
+.entourage-kicker,
+.memory-kicker,
+.ending-kicker{color:#b7657b!important;}
+.love-story-heading p,
+.entourage-intro,
+.story-text,
+.memory-upload-section>div>p,
+.ending-message{color:#765d64!important;}
+
+/* Elegant rose-gold dividers */
+.love-story-heading::after,
+.entourage-ornament::before,
+.entourage-ornament::after,
+.venue-divider::before,
+.venue-divider::after{
+  background:linear-gradient(90deg,transparent,#e3a2b1,transparent)!important;
+}
+
+/* Love story photos: polished frames, no lightbox/click UI */
+.story-photo{
+  padding:10px!important;
+  background:rgba(255,255,255,.86)!important;
+  border:1px solid rgba(207,124,145,.22)!important;
+  border-radius:7px!important;
+  box-shadow:0 18px 42px rgba(126,63,83,.11),0 0 0 5px rgba(255,255,255,.62)!important;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s ease!important;
+}
+.story-photo::before{border-color:rgba(211,137,155,.22)!important;}
+.story-photo img{border-radius:3px!important;}
+.story-item:nth-child(odd) .story-photo{transform:rotate(1deg);}
+.story-item:nth-child(even) .story-photo{transform:rotate(-1deg)!important;}
+.story-item:hover .story-photo{transform:translateY(-6px) rotate(0deg)!important;box-shadow:0 24px 50px rgba(126,63,83,.15),0 0 0 5px rgba(255,255,255,.72)!important;}
+
+.story-number{
+  border-color:#d78a9e!important;
+  background:linear-gradient(145deg,#fffafa,#fbe6eb)!important;
+  color:var(--rose-deep)!important;
+  box-shadow:0 6px 18px rgba(155,77,99,.10)!important;
+}
+.story-title{color:var(--rose-deep)!important;}
+.story-date{color:#b56579!important;}
+.story-date::before,.story-date::after{background:#e0a5b3!important;}
+
+/* Cards */
+.venue-card,
+.detail-card,
+.dress-card,
+.rsvp-card,
+.faq-item,
+.memory-step{
+  border-color:var(--soft-border)!important;
+  box-shadow:0 14px 34px var(--soft-shadow)!important;
+}
+.venue-card:hover,
+.memory-step:hover{box-shadow:0 22px 44px rgba(126,63,83,.14)!important;}
+.venue-type,.venue-location,.detail-section-title span{color:#b56579!important;}
+.maps-button,
+.rsvp-button,
+.memory-button{background:linear-gradient(135deg,#d97891,#c8667e)!important;box-shadow:0 10px 22px rgba(201,104,126,.18)!important;}
+.maps-button:hover,
+.rsvp-button:hover,
+.memory-button:hover{background:linear-gradient(135deg,#c8667e,#b85a72)!important;}
+
+/* Dress-code swatches and accents */
+.dress-card h4{color:var(--rose-deep)!important;}
+.dress-card p{color:#765d64!important;}
+
+/* RSVP / FAQ */
+.rsvp-section h2,.faq-section h2{color:var(--rose-deep)!important;}
+.faq-question{color:#664a52!important;}
+.faq-item.open .faq-icon{color:var(--rose)!important;}
+
+/* Gallery and ending */
+.memory-upload-section h2,.special-ending-section h2{color:var(--rose-deep)!important;}
+.memory-step::after{background:linear-gradient(90deg,#e3a2b1,#d97891,#e3a2b1)!important;}
+.ending-heart{color:#d97891!important;}
+
+/* Keep the floating petals delicate and pink */
+.floating-petal{background:linear-gradient(135deg,rgba(234,153,174,.76),rgba(255,240,244,.46))!important;}
+.floating-spark{color:rgba(201,104,126,.58)!important;}
+
+@media(max-width:760px){
+  .story-photo{max-width:520px;margin-left:auto!important;margin-right:auto!important;justify-self:center!important;}
+  .story-item:nth-child(odd) .story-photo,
+  .story-item:nth-child(even) .story-photo{transform:none!important;}
+  .story-item:hover .story-photo{transform:translateY(-3px)!important;}
+}
+
 </style>
 </head>
 <body>
@@ -2363,59 +2467,5 @@ document.querySelectorAll('.faq-question').forEach(function(button){
       <div class="ending-heart">♡</div></div>
   </section>
 
-<!-- WEDDING PHOTO LIGHTBOX -->
-<div id="weddingLightbox" role="dialog" aria-modal="true" aria-label="Wedding photo viewer">
-  <div class="lightbox-panel">
-    <button class="lightbox-close" type="button" aria-label="Close photo viewer">×</button>
-    <button class="lightbox-prev" type="button" aria-label="Previous photo">‹</button>
-    <img class="lightbox-image" src="" alt="">
-    <button class="lightbox-next" type="button" aria-label="Next photo">›</button>
-    <div class="lightbox-caption"></div>
-  </div>
-</div>
-
-<script>
-(function(){
-  const lightbox=document.getElementById('weddingLightbox');
-  if(!lightbox) return;
-  const image=lightbox.querySelector('.lightbox-image');
-  const caption=lightbox.querySelector('.lightbox-caption');
-  const close=lightbox.querySelector('.lightbox-close');
-  const prev=lightbox.querySelector('.lightbox-prev');
-  const next=lightbox.querySelector('.lightbox-next');
-  const photos=Array.from(document.querySelectorAll('.story-photo img'));
-  let current=0;
-
-  photos.forEach((img,index)=>{
-    const frame=img.closest('.story-photo');
-    if(!frame) return;
-    frame.tabIndex=0;
-    frame.setAttribute('role','button');
-    frame.setAttribute('aria-label','View '+(img.alt||'wedding photo'));
-    const open=()=>{ current=index; show(); lightbox.classList.add('is-open'); document.body.style.overflow='hidden'; close.focus(); };
-    frame.addEventListener('click',open);
-    frame.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
-  });
-
-  function show(){
-    const img=photos[current];
-    image.src=img.currentSrc||img.src;
-    image.alt=img.alt||'Wedding photo';
-    caption.textContent=(img.alt||'Wedding memory').replace(/^(First|The|Our) /,'');
-  }
-  function hide(){lightbox.classList.remove('is-open');document.body.style.overflow='';}
-  function move(dir){current=(current+dir+photos.length)%photos.length;show();}
-  close.addEventListener('click',hide);
-  prev.addEventListener('click',()=>move(-1));
-  next.addEventListener('click',()=>move(1));
-  lightbox.addEventListener('click',e=>{if(e.target===lightbox) hide();});
-  document.addEventListener('keydown',e=>{
-    if(!lightbox.classList.contains('is-open')) return;
-    if(e.key==='Escape') hide();
-    if(e.key==='ArrowLeft') move(-1);
-    if(e.key==='ArrowRight') move(1);
-  });
-})();
-</script>
 </body>
 </html>
