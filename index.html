@@ -2297,6 +2297,59 @@ footer{
   }
 }
 </style>
+
+<style id="invitation-card-rich-finish">
+/* Richer luxury paper for the invitation card */
+#invitation .invitation-card{
+  background:
+    radial-gradient(circle at 12% 14%,rgba(232,166,184,.24) 0 2px,transparent 3px),
+    radial-gradient(circle at 88% 18%,rgba(212,161,125,.22) 0 2px,transparent 3px),
+    radial-gradient(circle at 15% 86%,rgba(212,161,125,.16) 0 1.5px,transparent 2.5px),
+    radial-gradient(circle at 86% 84%,rgba(232,166,184,.20) 0 2px,transparent 3px),
+    radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.98),transparent 48%),
+    linear-gradient(145deg,#fff9f8 0%,#fce9ee 48%,#f5d7df 100%) !important;
+  border:1px solid rgba(190,132,107,.62) !important;
+  box-shadow:
+    0 20px 42px rgba(102,52,67,.20),
+    inset 0 0 0 2px rgba(211,165,132,.28),
+    inset 0 0 0 6px rgba(255,255,255,.62) !important;
+}
+#invitation .invitation-card::before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(190,132,107,.34);
+  pointer-events:none;
+}
+#invitation .invitation-card::after{
+  bottom:12px !important;
+  width:72px !important;
+  background:linear-gradient(90deg,transparent,#c58d70 22%,#c58d70 78%,transparent) !important;
+  opacity:.8;
+}
+#invitation .invitation-card-ornament{
+  color:#b77a62 !important;
+  text-shadow:0 2px 8px rgba(183,122,98,.16);
+}
+#invitation .invitation-card-kicker{
+  color:#95546a !important;
+  text-shadow:0 1px 5px rgba(149,84,106,.08);
+}
+#invitation .invitation-card-names{
+  color:#8f4760 !important;
+  text-shadow:0 3px 10px rgba(143,71,96,.12);
+}
+#invitation .invitation-card-names span{
+  color:#c58b69 !important;
+}
+#invitation .invitation-card-text{
+  color:#76535e !important;
+}
+#invitation .invitation-card-date{
+  color:#a15f70 !important;
+  font-weight:700;
+}
+</style>
 </head>
 <body>
 <div class="floating-details" aria-hidden="true">
