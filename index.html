@@ -1891,6 +1891,104 @@ body{color:var(--ink);background:var(--cream);}
 .cta,.maps-button,.rsvp-button,.memory-button,.music-toggle{background:linear-gradient(135deg,#e8a9b6,#d98a9d)!important;}
 .cta:hover,.maps-button:hover,.rsvp-button:hover,.memory-button:hover,.music-toggle:hover{background:linear-gradient(135deg,#dfa0af,#d18196)!important;}
 </style>
+
+<style>
+/* FINAL LOVE STORY PHOTO TREATMENT — soft blush editorial wedding frames */
+.story-photo{
+  position:relative;
+  padding:13px!important;
+  background:linear-gradient(145deg,#fffefd 0%,#fff8fa 58%,#f9e8ed 100%)!important;
+  border:1px solid rgba(205,112,137,.24)!important;
+  border-radius:2px!important;
+  box-shadow:
+    0 24px 55px rgba(126,63,83,.13),
+    0 0 0 1px rgba(215,176,138,.18),
+    0 0 0 7px rgba(255,255,255,.72)!important;
+  transition:transform .55s cubic-bezier(.2,.8,.2,1),box-shadow .55s ease,filter .45s ease!important;
+}
+.story-photo::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  border:1px solid rgba(215,176,138,.38)!important;
+  z-index:2;
+  pointer-events:none;
+}
+.story-photo::after{
+  content:"N  ♡  A";
+  position:absolute;
+  right:13px;
+  bottom:13px;
+  z-index:3;
+  min-width:56px;
+  padding:6px 8px 5px;
+  text-align:center;
+  color:#9b6674;
+  background:rgba(255,250,248,.90);
+  border:1px solid rgba(215,176,138,.34);
+  box-shadow:0 5px 14px rgba(126,63,83,.10);
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:.58rem;
+  letter-spacing:.12em;
+  backdrop-filter:blur(5px);
+  pointer-events:none;
+}
+.story-photo img{
+  position:relative;
+  z-index:1;
+  aspect-ratio:4/5!important;
+  object-fit:cover;
+  border-radius:0!important;
+  filter:saturate(.98) contrast(1.01);
+  transition:transform .9s cubic-bezier(.2,.8,.2,1),filter .6s ease!important;
+}
+.story-photo{
+  isolation:isolate;
+}
+.story-photo:focus-within,.story-photo:hover{
+  filter:brightness(1.015);
+}
+.story-item:hover .story-photo{
+  transform:translateY(-8px) rotate(0deg)!important;
+  box-shadow:
+    0 30px 65px rgba(126,63,83,.17),
+    0 0 0 1px rgba(215,176,138,.25),
+    0 0 0 7px rgba(255,255,255,.82)!important;
+}
+.story-item:hover .story-photo img{
+  transform:scale(1.035);
+  filter:saturate(1.035) contrast(1.02);
+}
+/* tiny champagne corner ornaments */
+.story-item:nth-child(odd) .story-photo{
+  box-shadow:
+    0 24px 55px rgba(126,63,83,.13),
+    0 0 0 1px rgba(215,176,138,.18),
+    0 0 0 7px rgba(255,255,255,.72),
+    10px 10px 0 -8px rgba(215,176,138,.20)!important;
+}
+.story-item:nth-child(even) .story-photo{
+  box-shadow:
+    0 24px 55px rgba(126,63,83,.13),
+    0 0 0 1px rgba(215,176,138,.18),
+    0 0 0 7px rgba(255,255,255,.72),
+    -10px 10px 0 -8px rgba(215,176,138,.20)!important;
+}
+@media(max-width:760px){
+  .story-photo{
+    width:min(100%,360px)!important;
+    padding:10px!important;
+    box-shadow:
+      0 20px 45px rgba(126,63,83,.12),
+      0 0 0 1px rgba(215,176,138,.18),
+      0 0 0 5px rgba(255,255,255,.72)!important;
+  }
+  .story-photo::before{inset:6px;}
+  .story-photo::after{right:10px;bottom:10px;}
+  .story-photo img{aspect-ratio:4/3!important;}
+  .story-item:hover .story-photo{transform:translateY(-4px)!important;}
+}
+</style>
 </head>
 <body>
 <div class="floating-details" aria-hidden="true">
