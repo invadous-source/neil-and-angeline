@@ -709,6 +709,11 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
 .story-photo::before{
   content:"";position:absolute;inset:-8px;border:1px solid rgba(183,154,120,.22);pointer-events:none;
 }
+.story-photo::after{
+  content:"";position:absolute;width:58px;height:58px;top:-15px;right:-15px;
+  border-top:1px solid rgba(183,154,120,.5);border-right:1px solid rgba(183,154,120,.5);
+  pointer-events:none;
+}
 .story-photo img{
   display:block;width:100%;aspect-ratio:4/5;object-fit:cover;
 }
@@ -1514,6 +1519,7 @@ body{background:#fff9f6}
 .story-photo{width:min(100%,430px);justify-self:center;padding:10px;background:rgba(255,255,255,.88);border:1px solid rgba(191,111,132,.18);box-shadow:0 22px 48px rgba(119,69,85,.16);transform:rotate(1deg)}
 .story-item:nth-child(even) .story-photo{transform:rotate(-1deg)}
 .story-photo::before{inset:5px;border:1px solid rgba(216,173,134,.34)}
+.story-photo::after{opacity:.75}
 .story-photo img{aspect-ratio:4/5;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
 .story-item:hover .story-photo img{transform:scale(1.025)}
 .story-note{margin-top:72px;font-size:1rem;letter-spacing:.06em;color:#986a77}
@@ -1908,6 +1914,7 @@ body{color:var(--ink);background:var(--cream);}
   z-index:2;
   pointer-events:none;
 }
+
 .story-photo img{
   position:relative;
   z-index:1;
@@ -1963,6 +1970,36 @@ body{color:var(--ink);background:var(--cream);}
   .story-item:hover .story-photo{transform:translateY(-4px)!important;}
 }
 </style>
+
+<style id="unified-pink-backgrounds">
+/* Unified soft blush-pink background treatment */
+body{
+  background:
+    radial-gradient(circle at 6% 8%,rgba(243,182,196,.22),transparent 28%),
+    radial-gradient(circle at 94% 18%,rgba(232,169,182,.18),transparent 30%),
+    linear-gradient(135deg,#fff8fa 0%,#fdf0f3 48%,#fff7f9 100%) !important;
+}
+.wedding-hero,
+.save-date-section,
+.love-story-section,
+.venues-section,
+.entourage-section,
+.rsvp-section,
+.finer-details-section,
+.faq-section,
+.memory-upload-section,
+.special-ending-section{
+  background:
+    radial-gradient(circle at 12% 12%,rgba(245,187,201,.20),transparent 27%),
+    radial-gradient(circle at 88% 82%,rgba(224,139,163,.13),transparent 30%),
+    linear-gradient(135deg,#fff8fa 0%,#fbe9ee 50%,#fff6f8 100%) !important;
+}
+footer{
+  background:
+    linear-gradient(135deg,#f8e2e8 0%,#fbeaf0 50%,#f6dce4 100%) !important;
+}
+</style>
+
 </head>
 <body>
 <div class="floating-details" aria-hidden="true">
