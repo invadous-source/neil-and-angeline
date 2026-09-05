@@ -2000,6 +2000,244 @@ footer{
 }
 </style>
 
+
+<style id="luxury-opening-redesign">
+/* =========================================================
+   LUXURY WEDDING INVITATION OPENING
+   Soft blush + ivory + champagne, with a cinematic reveal.
+   ========================================================= */
+#invitation{
+  background:
+    radial-gradient(circle at 50% 38%,rgba(255,255,255,.82),transparent 31%),
+    radial-gradient(circle at 8% 82%,rgba(230,157,176,.25),transparent 28%),
+    radial-gradient(circle at 92% 18%,rgba(239,190,202,.34),transparent 30%),
+    linear-gradient(135deg,#f7dce4 0%,#fff8f8 46%,#f1ccd6 100%);
+}
+#invitation .invitation-wrap{width:min(94vw,760px);}
+#invitation .envelope-stage{
+  width:min(88vw,540px);height:355px;margin-bottom:34px;
+  filter:drop-shadow(0 28px 28px rgba(116,61,78,.18));
+}
+#invitation .envelope{
+  border:1px solid rgba(181,108,128,.22);
+  border-radius:9px;
+  background:linear-gradient(145deg,#fffafb 0%,#f7d4de 55%,#e7acbb 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.9),
+    inset 0 -1px 0 rgba(142,76,96,.08),
+    0 1px 0 rgba(255,255,255,.55);
+}
+#invitation .envelope::after{opacity:.28}
+#invitation .envelope .flap{
+  background:
+    linear-gradient(135deg,transparent 49.7%,rgba(169,82,108,.10) 50%,transparent 50.4%),
+    linear-gradient(225deg,transparent 49.7%,rgba(169,82,108,.10) 50%,transparent 50.4%),
+    linear-gradient(150deg,#fff9fa 0%,#f3ccd7 58%,#e2a1b3 100%);
+  box-shadow:0 8px 18px rgba(126,63,83,.10);
+}
+#invitation .invitation-card{
+  position:absolute;left:50%;top:50%;z-index:6;
+  width:min(72%,315px);height:235px;
+  transform:translate(-50%,18px) scale(.72);
+  opacity:0;pointer-events:none;
+  padding:25px 22px 20px;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+  text-align:center;color:#704552;
+  background:linear-gradient(155deg,#fffdfb,#fff8f7 72%,#fdf0f2);
+  border:1px solid rgba(210,164,132,.48);
+  box-shadow:0 14px 30px rgba(107,57,72,.14),inset 0 0 0 5px rgba(255,255,255,.6);
+  transition:transform 1.35s cubic-bezier(.16,.82,.2,1),opacity .6s ease;
+}
+#invitation .invitation-card::before{
+  content:"";position:absolute;inset:9px;border:1px solid rgba(213,173,144,.34);pointer-events:none;
+}
+#invitation .invitation-card-ornament{
+  position:relative;z-index:1;color:#c98b6f;font-size:13px;line-height:1;margin-bottom:9px;
+}
+#invitation .invitation-card-ornament.bottom{margin-top:auto;margin-bottom:0;font-size:12px;color:#c9788b}
+#invitation .invitation-card-kicker{
+  position:relative;z-index:1;font-size:7px;letter-spacing:.22em;font-weight:700;color:#a06b76;
+}
+#invitation .invitation-card-names{
+  position:relative;z-index:1;margin-top:9px;font-size:27px;line-height:1.05;font-style:italic;font-weight:400;color:#9d566b;
+}
+#invitation .invitation-card-names span{font-size:18px;color:#d09a79;padding:0 4px}
+#invitation .invitation-card-line{
+  position:relative;z-index:1;width:54px;height:1px;margin:10px 0 9px;
+  background:linear-gradient(90deg,transparent,#d3a17e,transparent);
+}
+#invitation .invitation-card-text{
+  position:relative;z-index:1;font-size:7px;line-height:1.8;letter-spacing:.16em;font-weight:600;color:#8d626b;
+}
+#invitation .invitation-card-date{
+  position:relative;z-index:1;margin-top:10px;font-size:7px;letter-spacing:.17em;color:#b27c69;font-weight:700;
+}
+#invitation .envelope-stage.open .invitation-card{
+  opacity:1;transform:translate(-50%,-126px) scale(1);transition-delay:.38s;
+}
+#invitation .envelope-stage.open .flap{z-index:1}
+#invitation .envelope-stage.open .memory-1{transition-delay:.72s}
+#invitation .envelope-stage.open .memory-2{transition-delay:.90s}
+#invitation .envelope-stage.open .memory-3{transition-delay:1.08s}
+#invitation .seal{
+  background:
+    radial-gradient(circle at 34% 28%,#ffe5dc 0 4%,transparent 5%),
+    radial-gradient(circle,#df9dac 0 47%,#bc657c 49% 62%,#e7c19d 64% 67%,#a7546a 69%);
+  box-shadow:0 7px 18px rgba(108,51,68,.24),inset 0 0 0 4px rgba(255,230,214,.3);
+}
+#invitation .tap{
+  margin-top:16px;font-size:.68rem;letter-spacing:.24em;color:#92596a;
+}
+#invitation .tap::after{
+  content:"↓";display:block;margin-top:8px;font-size:13px;line-height:1;color:#c27a8d;animation:openingArrow 1.8s ease-in-out infinite;
+}
+@keyframes openingArrow{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(4px);opacity:1}}
+@media(max-width:760px){
+  #invitation .envelope-stage{height:285px;width:min(88vw,430px);margin-bottom:28px}
+  #invitation .invitation-card{width:68%;height:195px;padding:20px 15px 15px}
+  #invitation .invitation-card-names{font-size:22px}
+  #invitation .invitation-card-text{font-size:6px}
+  #invitation .envelope-stage.open .invitation-card{transform:translate(-50%,-104px) scale(.92)}
+  #invitation .envelope-stage.open .memory-1{transform:translate(-58px,-128px) rotate(-11deg) scale(.84)}
+  #invitation .envelope-stage.open .memory-2{transform:translate(-50%,-168px) rotate(0deg) scale(.9)}
+  #invitation .envelope-stage.open .memory-3{transform:translate(58px,-128px) rotate(11deg) scale(.84)}
+}
+@media(max-width:430px){
+  #invitation .invitation-card{width:67%;height:178px;padding-top:17px}
+  #invitation .invitation-card-kicker{font-size:6px}
+  #invitation .invitation-card-names{font-size:20px;margin-top:7px}
+  #invitation .invitation-card-line{margin:7px 0}
+}
+</style>
+
+<style id="luxury-opening-v2">
+/* FINAL LUXURY WEDDING OPENING */
+#invitation{
+  background:
+    radial-gradient(ellipse at 50% 18%,rgba(255,255,255,.92),transparent 30%),
+    radial-gradient(ellipse at 8% 88%,rgba(221,133,157,.22),transparent 30%),
+    radial-gradient(ellipse at 92% 78%,rgba(232,166,184,.25),transparent 32%),
+    linear-gradient(135deg,#f7d9e2 0%,#fff7f8 42%,#f3c4d1 100%);
+}
+#invitation::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;
+  background:radial-gradient(circle at 50% 50%,transparent 0 42%,rgba(130,65,84,.10) 100%);
+}
+#invitation .invitation-wrap{z-index:3}
+#invitation .envelope-stage{
+  width:min(88vw,560px);height:365px;margin-bottom:32px;
+  filter:drop-shadow(0 30px 34px rgba(112,55,73,.20));
+  transition:transform .5s ease;
+}
+#invitation .envelope-stage::before{
+  content:"";position:absolute;left:7%;right:7%;bottom:-15px;height:28px;
+  border-radius:50%;background:rgba(112,55,73,.13);filter:blur(15px);z-index:-2;
+}
+#invitation .envelope{
+  border:1px solid rgba(175,96,119,.24);border-radius:11px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.82),transparent 30%),
+    linear-gradient(145deg,#fffafc 0%,#f5d1dc 52%,#e3a2b5 100%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 0 rgba(126,63,83,.08),0 3px 0 rgba(255,255,255,.45);
+  transform-origin:center bottom;
+}
+#invitation .envelope::after{
+  opacity:.18;
+  background:
+    radial-gradient(circle at 16% 24%,rgba(210,157,124,.32) 0 1px,transparent 2px),
+    radial-gradient(circle at 82% 72%,rgba(210,157,124,.25) 0 1px,transparent 2px);
+}
+#invitation .envelope::before{
+  background:
+    linear-gradient(135deg,transparent 49.6%,rgba(156,72,100,.10) 50%,transparent 50.5%),
+    linear-gradient(225deg,transparent 49.6%,rgba(156,72,100,.10) 50%,transparent 50.5%),
+    linear-gradient(145deg,#fffafb,#e8afbf);
+}
+#invitation .envelope .flap{
+  height:60%;
+  background:
+    linear-gradient(135deg,transparent 49.7%,rgba(156,72,100,.08) 50%,transparent 50.4%),
+    linear-gradient(225deg,transparent 49.7%,rgba(156,72,100,.08) 50%,transparent 50.4%),
+    linear-gradient(155deg,#fffafd 0%,#f2cbd7 56%,#dfa0b4 100%);
+  box-shadow:0 9px 20px rgba(112,55,73,.10);
+}
+#invitation .envelope .flap::before{
+  content:"";position:absolute;left:12%;right:12%;top:9%;bottom:20%;
+  border:1px solid rgba(211,165,132,.28);clip-path:polygon(0 0,100% 0,50% 100%);
+}
+#invitation .envelope .flap::after{opacity:.38}
+#invitation .invitation-card{
+  width:min(68%,320px);height:242px;
+  padding:27px 23px 20px;
+  border-radius:4px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(255,255,255,.95),transparent 42%),
+    linear-gradient(155deg,#fffefa 0%,#fff9f7 72%,#f8e8eb 100%);
+  border:1px solid rgba(208,165,133,.52);
+  box-shadow:0 18px 38px rgba(102,52,67,.17),inset 0 0 0 6px rgba(255,255,255,.68);
+}
+#invitation .invitation-card::after{
+  content:"";position:absolute;left:50%;bottom:-15px;width:48px;height:1px;
+  transform:translateX(-50%);background:linear-gradient(90deg,transparent,#d4a17d,transparent);
+}
+#invitation .invitation-card-kicker{font-size:7px;letter-spacing:.27em;color:#9a6875}
+#invitation .invitation-card-names{font-size:31px;color:#925166;letter-spacing:.01em}
+#invitation .invitation-card-names span{color:#d09a78}
+#invitation .invitation-card-text{font-size:7px;letter-spacing:.20em;color:#80606a}
+#invitation .invitation-card-date{color:#a87565;letter-spacing:.20em}
+#invitation .invitation-card-ornament{color:#c38b70;font-size:14px}
+#invitation .seal{
+  width:66px;height:66px;top:56%;
+  border:2px solid rgba(164,78,101,.75);
+  background:
+    radial-gradient(circle at 32% 26%,#ffe9df 0 4%,transparent 5%),
+    radial-gradient(circle,#e2a0ae 0 44%,#b95f78 46% 61%,#e5bc98 63% 67%,#9d5068 69%);
+  box-shadow:0 8px 20px rgba(96,44,61,.24),inset 0 0 0 4px rgba(255,236,222,.32);
+}
+#invitation .seal::after{font-size:11px;line-height:62px;letter-spacing:.04em}
+#invitation .memory{
+  width:176px;height:222px;padding:7px 7px 26px;border-radius:2px;
+  background:linear-gradient(145deg,#fffefd,#fff8f7);
+  border:1px solid rgba(207,159,129,.34);
+  box-shadow:0 18px 34px rgba(103,52,68,.22),0 2px 0 rgba(255,255,255,.75);
+}
+#invitation .memory::after{content:"Neil & Anj";color:#a45d70;letter-spacing:.04em}
+#invitation .memory-1{left:7%;}
+#invitation .memory-3{right:7%;}
+#invitation .envelope-stage.open .memory-1{transform:translate(-103px,-162px) rotate(-14deg) scale(.93)}
+#invitation .envelope-stage.open .memory-2{transform:translate(-50%,-215px) rotate(0deg) scale(1.02)}
+#invitation .envelope-stage.open .memory-3{transform:translate(103px,-162px) rotate(14deg) scale(.93)}
+#invitation .envelope-stage.open .invitation-card{transform:translate(-50%,-135px) scale(1.02);transition-delay:.35s}
+#invitation .envelope-stage.open .seal{transform:translate(-50%,-50%) scale(.72) rotate(-12deg)}
+#invitation .names{
+  margin-top:2px;color:#a6536c;text-shadow:0 4px 18px rgba(112,55,73,.10);letter-spacing:.01em;
+}
+#invitation .date{color:#76555e;letter-spacing:.22em}
+#invitation .place{color:#966575;letter-spacing:.08em}
+#invitation .tap{
+  display:inline-block;position:relative;margin-top:22px;padding:11px 20px 9px;
+  color:#92566a;border:1px solid rgba(177,102,124,.26);border-radius:999px;
+  background:rgba(255,250,251,.42);box-shadow:0 8px 22px rgba(119,57,76,.07);
+  backdrop-filter:blur(7px);letter-spacing:.22em;
+}
+#invitation .tap::after{margin-top:7px}
+#invitation .envelope-stage:hover{transform:translateY(-4px)}
+#invitation .envelope-stage.open:hover{transform:none}
+@media(max-width:760px){
+  #invitation .envelope-stage{height:300px;width:min(90vw,440px);margin-bottom:24px}
+  #invitation .invitation-card{width:68%;height:200px;padding:22px 15px 16px}
+  #invitation .invitation-card-names{font-size:23px}
+  #invitation .envelope-stage.open .invitation-card{transform:translate(-50%,-108px) scale(.94)}
+  #invitation .memory{width:138px;height:180px;padding-bottom:23px}
+  #invitation .envelope-stage.open .memory-1{transform:translate(-57px,-135px) rotate(-12deg) scale(.83)}
+  #invitation .envelope-stage.open .memory-2{transform:translate(-50%,-175px) scale(.89)}
+  #invitation .envelope-stage.open .memory-3{transform:translate(57px,-135px) rotate(12deg) scale(.83)}
+  #invitation .seal{width:58px;height:58px}
+  #invitation .seal::after{line-height:54px;font-size:10px}
+  #invitation .names{font-size:clamp(3.3rem,12vw,5rem)}
+}
+</style>
+
 </head>
 <body>
 <div class="floating-details" aria-hidden="true">
@@ -2012,6 +2250,15 @@ footer{
   <div class="invitation-wrap">
     <div class="envelope-stage" id="envelopeButton" role="button" tabindex="0" aria-label="Open invitation">
       <div class="envelope">
+        <div class="invitation-card" aria-hidden="true">
+          <div class="invitation-card-ornament">✦</div>
+          <div class="invitation-card-kicker">TOGETHER WITH THEIR FAMILIES</div>
+          <div class="invitation-card-names">Neil <span>&amp;</span> Anj</div>
+          <div class="invitation-card-line"></div>
+          <div class="invitation-card-text">INVITE YOU TO CELEBRATE<br>THEIR WEDDING DAY</div>
+          <div class="invitation-card-date">NOVEMBER 26, 2026</div>
+          <div class="invitation-card-ornament bottom">♡</div>
+        </div>
         <div class="flap"></div>
         <div class="front"></div>
         <div class="photo-stack" aria-hidden="true">
@@ -2025,7 +2272,7 @@ footer{
     <h1 class="names">Neil &amp; Anj</h1>
     <div class="date">THURSDAY, NOVEMBER 26, 2026 • 3:00PM</div>
     <div class="place">TANAY, RIZAL</div>
-    <p class="tap">Click the envelope to see details</p></div>
+    <p class="tap">OPEN OUR INVITATION</p></div>
 </section>
 
 <main id="main">
