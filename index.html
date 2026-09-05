@@ -709,11 +709,6 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
 .story-photo::before{
   content:"";position:absolute;inset:-8px;border:1px solid rgba(183,154,120,.22);pointer-events:none;
 }
-.story-photo::after{
-  content:"";position:absolute;width:58px;height:58px;top:-15px;right:-15px;
-  border-top:1px solid rgba(183,154,120,.5);border-right:1px solid rgba(183,154,120,.5);
-  pointer-events:none;
-}
 .story-photo img{
   display:block;width:100%;aspect-ratio:4/5;object-fit:cover;
 }
@@ -1519,7 +1514,6 @@ body{background:#fff9f6}
 .story-photo{width:min(100%,430px);justify-self:center;padding:10px;background:rgba(255,255,255,.88);border:1px solid rgba(191,111,132,.18);box-shadow:0 22px 48px rgba(119,69,85,.16);transform:rotate(1deg)}
 .story-item:nth-child(even) .story-photo{transform:rotate(-1deg)}
 .story-photo::before{inset:5px;border:1px solid rgba(216,173,134,.34)}
-.story-photo::after{opacity:.75}
 .story-photo img{aspect-ratio:4/5;object-fit:cover;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
 .story-item:hover .story-photo img{transform:scale(1.025)}
 .story-note{margin-top:72px;font-size:1rem;letter-spacing:.06em;color:#986a77}
@@ -1914,25 +1908,6 @@ body{color:var(--ink);background:var(--cream);}
   z-index:2;
   pointer-events:none;
 }
-.story-photo::after{
-  content:"N  ♡  A";
-  position:absolute;
-  right:13px;
-  bottom:13px;
-  z-index:3;
-  min-width:56px;
-  padding:6px 8px 5px;
-  text-align:center;
-  color:#9b6674;
-  background:rgba(255,250,248,.90);
-  border:1px solid rgba(215,176,138,.34);
-  box-shadow:0 5px 14px rgba(126,63,83,.10);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:.58rem;
-  letter-spacing:.12em;
-  backdrop-filter:blur(5px);
-  pointer-events:none;
-}
 .story-photo img{
   position:relative;
   z-index:1;
@@ -1984,7 +1959,6 @@ body{color:var(--ink);background:var(--cream);}
       0 0 0 5px rgba(255,255,255,.72)!important;
   }
   .story-photo::before{inset:6px;}
-  .story-photo::after{right:10px;bottom:10px;}
   .story-photo img{aspect-ratio:4/3!important;}
   .story-item:hover .story-photo{transform:translateY(-4px)!important;}
 }
