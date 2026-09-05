@@ -1030,6 +1030,82 @@ section{
 .hero-scroll-hint span::after{content:"";position:absolute;bottom:0;left:50%;width:5px;height:5px;border-right:1px solid #c9788b;border-bottom:1px solid #c9788b;transform:translate(-50%,-1px) rotate(45deg)}
 @keyframes heroHint{50%{transform:translateY(5px);opacity:.48}}
 
+/* ---------- MOBILE LOVE STORY: one clean memory at a time ---------- */
+@media(max-width:760px){
+  .story-list{
+    display:flex;
+    flex-direction:column;
+    gap:58px;
+    padding:10px 0 28px;
+  }
+  .story-list::before{
+    left:50%;
+    transform:translateX(-50%);
+    top:0;
+    bottom:0;
+  }
+  .story-list::after{
+    left:50%;
+    transform:translate(-50%,50%);
+  }
+  .story-item,.story-item.reverse{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:17px;
+    padding:0 18px;
+    position:relative;
+  }
+  .story-item::before{
+    left:50%;
+    top:0;
+    width:12px;
+    height:12px;
+    transform:translate(-50%,0);
+    z-index:6;
+  }
+  .story-copy,.story-item.reverse .story-copy{
+    order:1 !important;
+    width:100%;
+    max-width:470px;
+    padding:30px 12px 0;
+    text-align:center !important;
+  }
+  .story-number{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    margin:0 auto 13px !important;
+    padding:0;
+    border:1px solid rgba(194,122,142,.28);
+    border-radius:50%;
+    background:#fff8f8;
+    box-shadow:0 7px 18px rgba(123,67,84,.10);
+    letter-spacing:.08em;
+  }
+  .story-title,.story-item:not(.reverse) .story-title{
+    margin:0 auto 7px !important;
+  }
+  .story-text,.story-item:not(.reverse) .story-text{
+    margin:13px auto 0 !important;
+    max-width:360px;
+    font-size:.98rem;
+    line-height:1.7;
+  }
+  .story-photo,.story-item:not(.reverse) .story-photo,.story-item.reverse .story-photo{
+    order:2 !important;
+    width:min(100%,360px);
+    justify-self:auto;
+    margin:0 auto;
+    transform:none !important;
+  }
+  .story-photo img{
+    aspect-ratio:4/3;
+  }
+}
+
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{
     animation-duration:.01ms!important;
@@ -1622,27 +1698,6 @@ body{background:#fff9f6}
 .special-ending-inner{animation:elegantFadeUp 1s ease both;}
 .ending-heart{filter:drop-shadow(0 6px 10px rgba(183,124,114,.16));}
 
-/* --- Floating quick navigation for the long invitation --- */
-.wedding-quick-nav{
-  position:fixed;right:20px;bottom:22px;z-index:80;
-  display:flex;align-items:center;gap:5px;padding:7px;
-  border:1px solid rgba(190,111,132,.20);border-radius:999px;
-  background:rgba(255,250,249,.82);backdrop-filter:blur(16px);
-  box-shadow:0 14px 35px rgba(82,58,62,.13);
-  opacity:0;transform:translateY(12px);pointer-events:none;
-  transition:opacity .3s ease,transform .3s ease;
-}
-.wedding-quick-nav.visible{opacity:1;transform:none;pointer-events:auto;}
-.wedding-quick-nav a{
-  display:grid;place-items:center;width:38px;height:38px;border-radius:50%;
-  color:#805565;text-decoration:none;font-size:.72rem;
-  transition:background .25s ease,color .25s ease,transform .25s ease;
-}
-.wedding-quick-nav a:hover,.wedding-quick-nav a.active{background:#f2dce2;color:#a6536d;transform:translateY(-2px);}
-.wedding-quick-nav .quick-home{font-size:1rem;}
-.wedding-quick-nav .quick-tip{position:absolute;right:0;bottom:52px;white-space:nowrap;padding:7px 10px;border-radius:8px;background:#5f4c52;color:#fff;font-size:.62rem;letter-spacing:.05em;opacity:0;transform:translateY(4px);pointer-events:none;transition:.2s ease;}
-.wedding-quick-nav a:hover + .quick-tip{opacity:1;transform:none;}
-
 /* --- Refined mobile presentation --- */
 @media(max-width:760px){
   .story-item:not(.reverse) .story-copy,.story-item:not(.reverse) .story-photo,
@@ -1661,9 +1716,6 @@ body{background:#fff9f6}
   .memory-upload-section{padding-top:82px;padding-bottom:92px;}
   .memory-upload-inner::before,.memory-upload-inner::after{display:none;}
   .memory-button{min-width:0;width:100%;}
-  .wedding-quick-nav{right:50%;transform:translate(50%,12px);bottom:14px;padding:6px;}
-  .wedding-quick-nav.visible{transform:translate(50%,0);}
-  .wedding-quick-nav a{width:34px;height:34px;}
 }
 </style>
 </head>
@@ -1706,13 +1758,7 @@ body{background:#fff9f6}
       <a href="#guest-gallery">Gallery</a></div>
   </nav>
 
-  <div class="wedding-quick-nav" id="weddingQuickNav" aria-label="Quick navigation">
-    <a class="quick-home" href="#home" aria-label="Home">♡</a>
-    <a href="#our-story" aria-label="Our story">01</a>
-    <a href="#venues" aria-label="Venues">02</a>
-    <a href="#rsvp" aria-label="RSVP">03</a>
-    <a href="#guest-gallery" aria-label="Gallery">04</a>
-  </div>
+
 
   <section class="hero wedding-hero" id="home">
     <div class="hero-inner">
@@ -2089,7 +2135,6 @@ body{background:#fff9f6}
         Thank you for being part of our story and for sharing this beautiful day with us.
       </div></div>
   </section>
-<footer>Made with love • Neil &amp; Anj</footer>
 </main>
 
 <script>
@@ -2208,114 +2253,6 @@ document.querySelectorAll('.faq-question').forEach(function(button){
 <script>
 (function(){
   document.addEventListener('DOMContentLoaded', function(){
-    // Premium quick navigation appears after the guest starts scrolling.
-    var quickNav = document.getElementById('weddingQuickNav');
-    if(quickNav){
-      var quickLinks = Array.from(quickNav.querySelectorAll('a'));
-      var quickSections = quickLinks.map(function(link){ return document.querySelector(link.getAttribute('href')); }).filter(Boolean);
-      function updateQuickNav(){ quickNav.classList.toggle('visible', window.scrollY > 420); }
-      updateQuickNav();
-      window.addEventListener('scroll', updateQuickNav, {passive:true});
-      if(quickSections.length){
-        var quickObserver = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){
-            if(entry.isIntersecting){
-              quickLinks.forEach(function(link){ link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id); });
-            }
-          });
-        }, {threshold:0.35, rootMargin:'-20% 0px -55% 0px'});
-        quickSections.forEach(function(section){ quickObserver.observe(section); });
-      }
-    }
-
-
-    // Reveal major content gracefully as the visitor scrolls.
-    var selectors = [
-      'section > *',
-      '.story-item',
-      '.details-heading',
-      '.detail-section',
-      '.program-item',
-      '.dress-card',
-      '.gift-card',
-      '.faq-item',
-      '.detail-callout',
-      'footer > *'
-    ];
-
-    var elements = [];
-    selectors.forEach(function(selector){
-      document.querySelectorAll(selector).forEach(function(el){
-        if(!el.classList.contains('reveal')){
-          elements.push(el);
-        }
-      });
-    });
-
-    elements.forEach(function(el, index){
-      el.classList.add('reveal');
-      if(el.classList.contains('story-copy')) el.classList.add('reveal-left');
-      if(el.classList.contains('story-photo')) el.classList.add('reveal-right');
-      if(el.classList.contains('story-item')){
-        el.classList.add(index % 2 === 0 ? 'reveal-left' : 'reveal-right');
-      }
-      el.style.transitionDelay = Math.min((index % 5) * 0.07, 0.28) + 's';
-    });
-
-    var revealObserver = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.12, rootMargin:'0px 0px -30px 0px'});
-
-    elements.forEach(function(el){revealObserver.observe(el);});
-
-    // Navbar scroll state.
-    var nav = document.querySelector('header nav') ||
-              document.querySelector('.navbar') ||
-              document.querySelector('nav');
-
-    function updateNav(){
-      if(nav) nav.classList.toggle('is-scrolled', window.scrollY > 35);
-    }
-    updateNav();
-    window.addEventListener('scroll', updateNav, {passive:true});
-
-    // Active navigation link based on visible section.
-    var navLinks = Array.from(document.querySelectorAll('a[href^="#"]'));
-    var sections = navLinks.map(function(link){
-      var id = link.getAttribute('href');
-      return document.querySelector(id);
-    }).filter(Boolean);
-
-    if(sections.length){
-      var activeObserver = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){
-            navLinks.forEach(function(link){
-              link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
-            });
-          }
-        });
-      }, {threshold:0.35, rootMargin:'-25% 0px -55% 0px'});
-
-      sections.forEach(function(section){activeObserver.observe(section);});
-    }
-
-    // Smooth anchor scrolling with a natural offset.
-    navLinks.forEach(function(link){
-      link.addEventListener('click', function(e){
-        var target = document.querySelector(link.getAttribute('href'));
-        if(target){
-          e.preventDefault();
-          target.scrollIntoView({behavior:'smooth', block:'start'});
-        }
-      });
-    });
-
     // Add staggered entrance to program items.
     document.querySelectorAll('.program-item').forEach(function(item, index){
       item.style.transitionDelay = (index * 0.08) + 's';
