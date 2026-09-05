@@ -2440,44 +2440,47 @@ img{transition:transform .9s cubic-bezier(.2,.75,.2,1),filter .9s ease}
 }
 </style>
 
-<style id="cinematic-wedding-upgrade">
-/* CINEMATIC WEDDING ATMOSPHERE */
-html{scroll-behavior:smooth}
-.cinematic-section{position:relative;isolation:isolate}
-.cinematic-section::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0;background:linear-gradient(105deg,transparent 18%,rgba(255,255,255,.34) 48%,transparent 78%);transform:translateX(-120%);}
-.cinematic-section.cinematic-in::after{animation:sectionLightSweep 1.8s cubic-bezier(.2,.7,.2,1) both}
-.cinematic-section > *{position:relative;z-index:1}
-.cinematic-section .section-heading,.cinematic-section .hero-inner,.cinematic-section .save-date-inner,.cinematic-section .story-inner,.cinematic-section .venues-inner,.cinematic-section .entourage-inner,.cinematic-section .rsvp-inner,.cinematic-section .finer-details-inner,.cinematic-section .faq-inner,.cinematic-section .memory-upload-inner,.cinematic-section .special-ending-inner{animation:sectionContentSettle 1.05s cubic-bezier(.16,.82,.2,1) both}
-.cinematic-section.cinematic-in .section-heading,.cinematic-section.cinematic-in .hero-inner,.cinematic-section.cinematic-in .save-date-inner,.cinematic-section.cinematic-in .story-inner,.cinematic-section.cinematic-in .venues-inner,.cinematic-section.cinematic-in .entourage-inner,.cinematic-section.cinematic-in .rsvp-inner,.cinematic-section.cinematic-in .finer-details-inner,.cinematic-section.cinematic-in .faq-inner,.cinematic-section.cinematic-in .memory-upload-inner,.cinematic-section.cinematic-in .special-ending-inner{animation-name:sectionContentSettle}
-.cinematic-section .venue-card,.cinematic-section .story-item,.cinematic-section .party-card,.cinematic-section .detail-card,.cinematic-section .faq-item,.cinematic-section .memory-step,.cinematic-section .program-item{transition:transform .8s cubic-bezier(.16,.82,.2,1),opacity .8s ease,box-shadow .35s ease}
-.romantic-atmosphere{position:fixed;inset:0;pointer-events:none;z-index:9;overflow:hidden;mix-blend-mode:multiply}
-.romantic-atmosphere .petal{position:absolute;top:-8vh;width:10px;height:16px;border-radius:70% 25% 70% 25%;background:rgba(211,125,148,.22);box-shadow:0 0 10px rgba(255,255,255,.25);animation:petalFall linear infinite;transform:rotate(25deg)}
-.romantic-atmosphere .petal:nth-child(1){left:5%;animation-duration:18s;animation-delay:-4s;scale:.75}
-.romantic-atmosphere .petal:nth-child(2){left:14%;animation-duration:23s;animation-delay:-15s;scale:.5}
-.romantic-atmosphere .petal:nth-child(3){left:25%;animation-duration:19s;animation-delay:-9s;scale:.9}
-.romantic-atmosphere .petal:nth-child(4){left:38%;animation-duration:26s;animation-delay:-20s;scale:.6}
-.romantic-atmosphere .petal:nth-child(5){left:52%;animation-duration:21s;animation-delay:-13s;scale:.8}
-.romantic-atmosphere .petal:nth-child(6){left:64%;animation-duration:24s;animation-delay:-6s;scale:.55}
-.romantic-atmosphere .petal:nth-child(7){left:73%;animation-duration:20s;animation-delay:-17s;scale:.9}
-.romantic-atmosphere .petal:nth-child(8){left:84%;animation-duration:27s;animation-delay:-22s;scale:.65}
-.romantic-atmosphere .petal:nth-child(9){left:93%;animation-duration:22s;animation-delay:-11s;scale:.5}
-.romantic-atmosphere .petal:nth-child(10){left:46%;animation-duration:29s;animation-delay:-25s;scale:.45}
-.romantic-atmosphere .sparkle{position:absolute;width:4px;height:4px;border-radius:50%;background:rgba(194,132,151,.28);box-shadow:0 0 14px rgba(255,255,255,.8);animation:sparkleFloat 5s ease-in-out infinite}
-.romantic-atmosphere .sparkle.s1{left:11%;top:34%;animation-delay:-1s}.romantic-atmosphere .sparkle.s2{left:87%;top:46%;animation-delay:-3s}.romantic-atmosphere .sparkle.s3{left:70%;top:19%;animation-delay:-2s}.romantic-atmosphere .sparkle.s4{left:31%;top:72%;animation-delay:-4s}
-.wedding-day-badge{display:inline-flex;align-items:center;gap:9px;margin:0 auto 24px;padding:8px 15px;border:1px solid rgba(184,105,127,.22);border-radius:999px;background:rgba(255,250,251,.6);color:#9a5f72;font:600 9px/1 Georgia,"Times New Roman",serif;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 8px 24px rgba(126,63,83,.06);backdrop-filter:blur(7px);animation:badgeGlow 3s ease-in-out infinite}
-.wedding-day-badge::before{content:"✦";color:#c59a78}
-.save-date-section.wedding-today .countdown-grid{opacity:.42;filter:saturate(.7)}
-.save-date-section.wedding-today .countdown-caption{display:none}
-.save-date-section.wedding-today .section-heading h2{letter-spacing:.09em}
-@keyframes sectionLightSweep{0%{opacity:0;transform:translateX(-120%)}18%{opacity:1}100%{opacity:0;transform:translateX(120%)}}
-@keyframes sectionContentSettle{0%{opacity:.45;transform:translateY(24px) scale(.985)}100%{opacity:1;transform:none}}
-@keyframes petalFall{0%{transform:translate3d(0,-10vh,0) rotate(0deg)}25%{margin-left:20px}50%{transform:translate3d(-18px,48vh,0) rotate(150deg)}75%{margin-left:14px}100%{transform:translate3d(28px,112vh,0) rotate(320deg)}}
-@keyframes sparkleFloat{0%,100%{transform:translateY(0) scale(.7);opacity:.25}50%{transform:translateY(-14px) scale(1.25);opacity:.75}}
-@keyframes badgeGlow{0%,100%{box-shadow:0 8px 24px rgba(126,63,83,.05)}50%{box-shadow:0 10px 30px rgba(194,121,143,.13)}}
-@media(max-width:760px){.romantic-atmosphere{opacity:.72}.romantic-atmosphere .petal{width:8px;height:13px}.wedding-day-badge{font-size:8px;letter-spacing:.14em}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.romantic-atmosphere{display:none}.cinematic-section::after{display:none}.cinematic-section .section-heading,.cinematic-section .hero-inner,.cinematic-section .save-date-inner,.cinematic-section .story-inner,.cinematic-section .venues-inner,.cinematic-section .entourage-inner,.cinematic-section .rsvp-inner,.cinematic-section .finer-details-inner,.cinematic-section .faq-inner,.cinematic-section .memory-upload-inner,.cinematic-section .special-ending-inner{animation:none!important}.wedding-day-badge{animation:none}}
-</style>
 
+
+<style id="rsvp-final-polish">
+/* RSVP — elegant invitation moment */
+.rsvp-section{position:relative;overflow:hidden;}
+.rsvp-section::after{content:"♡";position:absolute;left:50%;bottom:34px;transform:translateX(-50%);font-size:1rem;color:rgba(199,139,105,.38);pointer-events:none;}
+.rsvp-inner{max-width:820px;margin:0 auto;text-align:center;}
+.rsvp-kicker{margin-bottom:13px!important;color:#b48667!important;font-size:.68rem!important;letter-spacing:.30em!important;text-transform:uppercase!important;font-weight:600;}
+.rsvp-section h2{margin:0!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(2.5rem,6vw,4.5rem)!important;font-weight:400!important;letter-spacing:.06em!important;line-height:1.05!important;}
+.rsvp-section> .rsvp-inner > p{max-width:620px;margin:17px auto 34px!important;color:#806d70!important;font-size:.98rem!important;line-height:1.85!important;}
+.rsvp-card{background:linear-gradient(145deg,rgba(255,255,255,.88),rgba(255,247,248,.78))!important;border:1px solid rgba(190,126,145,.20)!important;box-shadow:0 24px 60px rgba(126,63,83,.10)!important;backdrop-filter:blur(10px);}
+.rsvp-card::before{inset:11px!important;border:1px solid rgba(198,151,120,.18)!important;}
+.rsvp-card::after{content:"✦"!important;top:16px!important;right:20px!important;color:#c99a78!important;}
+.rsvp-card .date-note{color:#aa7c61!important;letter-spacing:.16em!important;font-size:.72rem!important;text-transform:uppercase;}
+.rsvp-card h3{font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(1.45rem,3vw,2rem)!important;font-weight:400!important;color:#754754!important;line-height:1.35!important;}
+.rsvp-button{position:relative;overflow:hidden;min-width:230px!important;padding:14px 25px!important;border-radius:999px!important;letter-spacing:.13em!important;box-shadow:0 12px 28px rgba(184,92,119,.16)!important;}
+.rsvp-button::before{content:"";position:absolute;top:0;bottom:0;left:-75%;width:42%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.42),transparent);transform:skewX(-18deg);transition:left .7s ease;pointer-events:none;}
+.rsvp-button:hover::before{left:135%;}
+.rsvp-heart,.rsvp-sparkle{display:inline-block;color:#fff1f3;font-size:1.05em;vertical-align:-1px;}
+.rsvp-heart{margin-right:5px;animation:rsvpHeart 2.4s ease-in-out infinite;}
+.rsvp-sparkle{margin-left:5px;font-size:.78em;animation:rsvpSparkle 2.4s ease-in-out infinite .3s;}
+@keyframes rsvpHeart{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.16);opacity:1}}
+@keyframes rsvpSparkle{0%,100%{transform:rotate(0) scale(.9);opacity:.65}50%{transform:rotate(18deg) scale(1.15);opacity:1}}
+
+/* Final spacing + typography polish */
+section{scroll-margin-top:18px;}
+.hero-message,.entourage-intro,.finer-heading p,.gift-copy,.program-note{max-width:650px;}
+.venue-card,.party-card,.dress-card,.gift-card,.faq-item,.detail-callout,.rsvp-card{will-change:transform;}
+.venue-card:hover,.party-card:hover,.dress-card:hover,.gift-card:hover{box-shadow:0 22px 52px rgba(126,63,83,.13)!important;}
+.story-photo,.main-photo-frame{backface-visibility:hidden;}
+@media(max-width:700px){
+  .rsvp-section{padding-top:88px!important;padding-bottom:98px!important;}
+  .rsvp-section> .rsvp-inner > p{font-size:.9rem!important;line-height:1.75!important;margin-bottom:28px!important;}
+  .rsvp-card h3{font-size:1.3rem!important;}
+  .rsvp-button{width:min(100%,300px)!important;}
+}
+@media(prefers-reduced-motion:reduce){
+  .rsvp-heart,.rsvp-sparkle{animation:none!important;}
+  .rsvp-button::before{display:none;}
+}
+</style>
 </head>
 <body>
 <div class="romantic-atmosphere" aria-hidden="true"><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="petal"></span><span class="sparkle s1"></span><span class="sparkle s2"></span><span class="sparkle s3"></span><span class="sparkle s4"></span></div>
@@ -2572,7 +2575,6 @@ html{scroll-behavior:smooth}
   <section class="save-date-section" id="save-date">
     <div class="save-date-inner">
       <div class="section-heading">
-        <div class="wedding-day-badge" id="weddingDayBadge">OUR FOREVER BEGINS SOON</div>
         <h2 id="saveDateTitle">SAVE THE DATE</h2>
         <p>NOVEMBER 26, 2026 • THURSDAY</p></div>
 
@@ -2834,13 +2836,13 @@ html{scroll-behavior:smooth}
   <!-- RSVP -->
   <section class="rsvp-section" id="rsvp">
     <div class="rsvp-inner">
-      <div class="rsvp-kicker">Please let us know</div>
-      <h2>WILL YOU JOIN US?</h2>
-      <p>We would be honored to celebrate our special day with you. Kindly let us know if you will be joining us.</p>
+      <div class="rsvp-kicker">A little note from us</div>
+      <h2>RSVP WITH US</h2>
+      <p>We would be honored to celebrate this special day with you. Your presence would make our celebration even more meaningful.</p>
       <div class="rsvp-card">
         <div class="date-note">November 26, 2026</div>
         <h3>Your presence would mean the world to us.</h3>
-        <a class="rsvp-button" href="https://forms.gle/VHGMURXaZzYifkM47" target="_blank" rel="noopener noreferrer">💌 RSVP HERE</a></div>
+        <a class="rsvp-button" href="https://forms.gle/VHGMURXaZzYifkM47" target="_blank" rel="noopener noreferrer"><span class="rsvp-heart">♡</span> RSVP WITH US <span class="rsvp-sparkle">✦</span></a></div>
     </div>
   </section>
 
@@ -3102,26 +3104,6 @@ document.querySelectorAll('.faq-question').forEach(function(button){
     allAnimated.forEach(el=>observer.observe(el));
   }
 
-  // Wedding-day transformation: Nov 26 becomes the celebration itself.
-  const weddingDate=new Date('2026-11-26T15:00:00');
-  const now=new Date();
-  const saveSection=document.getElementById('save-date');
-  const title=document.getElementById('saveDateTitle');
-  const badge=document.getElementById('weddingDayBadge');
-  const subtitle=saveSection && saveSection.querySelector('.section-heading p');
-  if(saveSection && title && badge){
-    const sameDay=now.getFullYear()===weddingDate.getFullYear() && now.getMonth()===weddingDate.getMonth() && now.getDate()===weddingDate.getDate();
-    if(sameDay){
-      saveSection.classList.add('wedding-today');
-      title.textContent='TODAY, WE BEGIN FOREVER';
-      badge.textContent='TODAY IS THE DAY';
-      if(subtitle) subtitle.textContent='NOVEMBER 26, 2026 • THURSDAY';
-    }else if(now>weddingDate){
-      title.textContent='WE SAID I DO';
-      badge.textContent='FOREVER BEGINS HERE';
-      if(subtitle) subtitle.textContent='NOVEMBER 26, 2026 • OUR WEDDING DAY';
-    }
-  }
 })();
 </script>
 
