@@ -597,262 +597,162 @@ footer{padding:30px;text-align:center;font-size:.78rem;color:#9b7881}
 /* OUR LOVE STORY - ELEGANT WEDDING EDITORIAL DESIGN */
 .love-story-section{
   position:relative;
-  padding:110px 7vw 125px;
+  padding:112px 5vw 128px;
   overflow:hidden;
   background:
-    radial-gradient(circle at 7% 15%, rgba(201,170,139,.22), transparent 25%),
-    radial-gradient(circle at 92% 82%, rgba(184,143,151,.18), transparent 28%),
-    linear-gradient(180deg,#fffaf6 0%,#f1ece7 52%,#fffaf8 100%);
+    radial-gradient(circle at 7% 15%, rgba(201,170,139,.20), transparent 25%),
+    radial-gradient(circle at 93% 78%, rgba(184,143,151,.16), transparent 28%),
+    linear-gradient(180deg,#fffaf7 0%,#f5eeea 52%,#fffaf8 100%);
 }
 .love-story-section::before,
 .love-story-section::after{
   content:"";
   position:absolute;
-  width:360px;
-  height:360px;
-  border:1px solid rgba(158,126,101,.12);
+  width:360px;height:360px;
+  border:1px solid rgba(158,126,101,.11);
   border-radius:50%;
   pointer-events:none;
 }
 .love-story-section::before{top:-210px;left:-170px}
 .love-story-section::after{right:-210px;bottom:-170px}
-
-.love-story-inner{
-  position:relative;
-  z-index:1;
-  max-width:1160px;
-  margin:0 auto;
-}
+.love-story-inner{position:relative;z-index:1;max-width:1180px;margin:0 auto}
 .love-story-heading{
-  position:relative;
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 92px;
+  position:relative;text-align:center;max-width:790px;
+  margin:0 auto 105px;
 }
 .love-story-heading::after{
-  content:"✦  ♡  ✦";
-  display:block;
-  margin-top:24px;
-  color:#a58a68;
-  letter-spacing:.7em;
-  font-size:.7rem;
+  content:"✦  ♡  ✦";display:block;margin:25px auto 0;
+  color:#a58a68;letter-spacing:.7em;font-size:.7rem;
   transform:translateX(.35em);
 }
 .love-story-heading .story-kicker{
-  margin:0 0 16px;
-  color:#a98976;
-  font-size:.68rem;
-  letter-spacing:.32em;
-  text-transform:uppercase;
+  margin:0 0 15px;color:#a98976;font-size:.68rem;
+  letter-spacing:.32em;text-transform:uppercase;
 }
 .love-story-heading h2{
-  margin:0;
-  color:#56575a;
-  font-size:clamp(2.8rem,6vw,5rem);
-  font-weight:400;
-  letter-spacing:.07em;
-  line-height:1;
+  margin:0;color:#56575a;font-size:clamp(2.65rem,6vw,5rem);
+  font-weight:400;letter-spacing:.065em;line-height:1.03;
 }
 .love-story-heading p{
-  max-width:600px;
-  margin:19px auto 0;
-  color:#897a75;
-  font-size:.98rem;
-  line-height:1.8;
+  max-width:650px;margin:20px auto 0;color:#897a75;
+  font-size:.98rem;line-height:1.85;
 }
-
 .story-list{
-  display:flex;
-  flex-direction:column;
-  gap:82px;
+  position:relative;display:flex;flex-direction:column;gap:96px;
+}
+/* One continuous editorial timeline */
+.story-list::before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;
+  background:linear-gradient(180deg,transparent,#d9c3b5 7%,#d9c3b5 93%,transparent);
+  transform:translateX(-50%);opacity:.8;
 }
 .story-item{
-  position:relative;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(380px,1fr);
-  align-items:center;
-  gap:82px;
-  padding:48px 34px;
-  border-top:2px solid rgba(160,132,107,.30);
-  border-bottom:2px solid rgba(160,132,107,.18);
+  position:relative;display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(390px,1fr);
+  align-items:center;gap:74px;min-height:510px;padding:18px 28px;
 }
 .story-item::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:-7px;
-  width:12px;
-  height:12px;
-  border:1px solid #b79a78;
-  background:#fffdfb;
-  transform:translateX(-50%) rotate(45deg);
+  content:"";position:absolute;left:50%;top:50%;z-index:3;
+  width:14px;height:14px;border-radius:50%;
+  border:1px solid #b79a78;background:#fffaf7;
+  box-shadow:0 0 0 7px rgba(212,183,165,.16);
+  transform:translate(-50%,-50%);
 }
-.story-item.reverse{
-  grid-template-columns:minmax(380px,1fr) minmax(0,1fr);
-}
+.story-item.reverse{grid-template-columns:minmax(390px,1fr) minmax(0,1fr)}
 .story-item.reverse .story-copy{order:2}
 .story-item.reverse .story-photo{order:1}
-
 .story-copy{
-  position:relative;
-  text-align:center;
-  padding:35px 22px;
+  position:relative;text-align:center;padding:42px 40px;
+  max-width:520px;margin:0 auto;
 }
 .story-copy::before{
-  content:"";
-  position:absolute;
-  inset:10px 0;
-  border-left:1px solid rgba(183,154,120,.32);
-  border-right:1px solid rgba(183,154,120,.32);
-  opacity:.45;
+  content:"";position:absolute;inset:13px 8px;
+  border-left:1px solid rgba(183,154,120,.24);
+  border-right:1px solid rgba(183,154,120,.24);
   pointer-events:none;
 }
 .story-copy::after{
-  content:"♡";
-  display:block;
-  margin-top:22px;
-  color:#b79a78;
-  font-size:1.1rem;
+  content:"♡";display:block;margin-top:25px;color:#b79a78;font-size:1rem;
 }
-
 .story-number{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:42px;
-  height:42px;
-  margin:0 auto 16px;
-  border-radius:50%;
-  border:1px solid rgba(165,137,104,.65);
-  background:linear-gradient(145deg,#fffdf9,#efe2d3);
-  color:#9b7b58;
-  font-size:.72rem;
-  letter-spacing:.12em;
-  font-weight:600;
-  box-shadow:0 5px 15px rgba(115,86,60,.10);
+  display:flex;align-items:center;justify-content:center;
+  width:48px;height:48px;margin:0 auto 21px;border-radius:50%;
+  border:1px solid rgba(165,137,104,.7);
+  background:linear-gradient(145deg,#fffdf9,#eee0d2);color:#9b7b58;
+  font-size:.7rem;letter-spacing:.14em;font-weight:600;
+  box-shadow:0 7px 20px rgba(115,86,60,.10);
 }
 .story-title{
-  margin:0;
-  color:#59595b;
-  font-size:clamp(1.9rem,3.8vw,3rem);
-  line-height:1.1;
-  letter-spacing:.07em;
-  font-weight:400;
-  text-transform:uppercase;
+  margin:0;color:#694a56;font-size:clamp(1.75rem,3.3vw,2.7rem);
+  line-height:1.13;letter-spacing:.07em;font-weight:400;text-transform:uppercase;
 }
 .story-date{
-  position:relative;
-  display:inline-block;
-  margin:15px 0 17px;
-  padding:0 23px;
-  color:#a07f58;
-  font-family:"Brush Script MT","Segoe Script",cursive;
-  font-size:clamp(2rem,4vw,3.15rem);
-  line-height:1;
-  font-weight:400;
+  position:relative;display:inline-block;margin:15px 0 18px;padding:0 23px;
+  color:#a07f58;font-family:"Brush Script MT","Segoe Script",cursive;
+  font-size:clamp(1.65rem,3vw,2.45rem);line-height:1;font-weight:400;
 }
-.story-date::before,
-.story-date::after{
-  content:"";
-  position:absolute;
-  top:52%;
-  width:13px;
-  height:1px;
-  background:#c5ab8e;
+.story-date::before,.story-date::after{
+  content:"";position:absolute;top:52%;width:14px;height:1px;background:#c5ab8e;
 }
-.story-date::before{left:0}
-.story-date::after{right:0}
+.story-date::before{left:0}.story-date::after{right:0}
 .story-text{
-  max-width:500px;
-  margin:0 auto;
-  color:#5d5d60;
-  font-size:clamp(1.15rem,2.15vw,1.72rem);
-  line-height:1.35;
-  letter-spacing:.01em;
+  max-width:470px;margin:0 auto;color:#696164;
+  font-size:clamp(1rem,1.55vw,1.2rem);line-height:1.75;letter-spacing:.005em;
 }
-
 .story-photo{
-  position:relative;
-  width:100%;
-  max-width:445px;
-  justify-self:center;
-  padding:11px;
-  background:#fffdf9;
-  border:2px solid rgba(176,145,113,.48);
-  box-shadow:0 24px 55px rgba(83,66,58,.18), 0 0 0 7px rgba(255,255,255,.55);
-  transform:rotate(.35deg);
-  transition:transform .35s ease, box-shadow .35s ease;
+  position:relative;width:100%;max-width:470px;justify-self:center;
+  padding:12px;background:#fffdf9;border:1px solid rgba(176,145,113,.45);
+  box-shadow:0 25px 60px rgba(83,66,58,.17),0 0 0 8px rgba(255,255,255,.48);
+  transform:rotate(1deg);transition:transform .45s ease,box-shadow .45s ease;
 }
-.story-item:nth-child(even) .story-photo{transform:rotate(-.35deg)}
+.story-item:nth-child(even) .story-photo{transform:rotate(-1deg)}
 .story-photo::before{
-  content:"";
-  position:absolute;
-  inset:-7px;
-  border:1px solid rgba(183,154,120,.25);
-  pointer-events:none;
+  content:"";position:absolute;inset:-8px;border:1px solid rgba(183,154,120,.22);pointer-events:none;
 }
 .story-photo::after{
-  content:"";
-  position:absolute;
-  width:54px;
-  height:54px;
-  top:-14px;
-  right:-14px;
-  border-top:1px solid rgba(183,154,120,.55);
-  border-right:1px solid rgba(183,154,120,.55);
+  content:"";position:absolute;width:58px;height:58px;top:-15px;right:-15px;
+  border-top:1px solid rgba(183,154,120,.5);border-right:1px solid rgba(183,154,120,.5);
   pointer-events:none;
 }
 .story-photo img{
-  display:block;
-  width:100%;
-  aspect-ratio:1/1;
-  object-fit:cover;
+  display:block;width:100%;aspect-ratio:4/5;object-fit:cover;
 }
 .story-item:hover .story-photo{
-  transform:translateY(-7px) rotate(0deg);
-  box-shadow:0 28px 55px rgba(83,66,58,.19);
+  transform:translateY(-9px) rotate(0deg);
+  box-shadow:0 32px 65px rgba(83,66,58,.21),0 0 0 8px rgba(255,255,255,.55);
 }
-
 .story-note{
-  position:relative;
-  margin:85px auto 0;
-  padding-top:28px;
-  text-align:center;
-  color:#9a8580;
-  font-size:.78rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
+  position:relative;margin:98px auto 0;padding-top:29px;text-align:center;
+  color:#9a8580;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
 }
 .story-note::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:50%;
-  width:85px;
-  height:1px;
-  background:#c5ab8e;
-  transform:translateX(-50%);
+  content:"";position:absolute;top:0;left:50%;width:90px;height:1px;
+  background:#c5ab8e;transform:translateX(-50%);
 }
-
 @media(max-width:820px){
   .love-story-section{padding:82px 18px 95px}
-  .love-story-heading{margin-bottom:58px}
+  .love-story-heading{margin-bottom:62px}
   .love-story-heading h2{letter-spacing:.045em}
-  .story-list{gap:55px}
-  .story-item,
-  .story-item.reverse{
-    grid-template-columns:1fr;
-    gap:28px;
-    padding:28px 12px;
+  .story-list{gap:58px}
+  .story-list::before{display:none}
+  .story-item,.story-item.reverse{
+    grid-template-columns:1fr;gap:26px;min-height:0;padding:18px 10px 35px;
   }
-  .story-item.reverse .story-copy,
-  .story-item.reverse .story-photo{order:initial}
-  .story-copy{padding:24px 15px}
-  .story-copy::before{inset:5px 0}
-  .story-photo{max-width:500px;padding:8px}
-  .story-text{font-size:1.24rem}
+  .story-item::before{display:none}
+  .story-item.reverse .story-copy,.story-item.reverse .story-photo{order:initial}
+  .story-copy{padding:28px 20px;max-width:600px}
+  .story-copy::before{inset:7px 0}
+  .story-photo{max-width:520px;padding:9px}
+  .story-photo img{aspect-ratio:4/5}
+  .story-text{font-size:1.05rem;line-height:1.7}
 }
-
+@media(max-width:480px){
+  .love-story-heading h2{font-size:2.35rem}
+  .love-story-heading p{font-size:.9rem}
+  .story-title{font-size:1.55rem}
+  .story-number{width:44px;height:44px}
+  .story-photo{box-shadow:0 18px 42px rgba(83,66,58,.15),0 0 0 6px rgba(255,255,255,.48)}
+}
 
 
 /* WEDDING FINER DETAILS - TEXT & FUNCTIONAL */
@@ -1757,9 +1657,9 @@ body{background:#fff9f6}
   <section class="love-story-section" id="our-story">
     <div class="love-story-inner">
       <div class="love-story-heading">
-        <p class="story-kicker">A little look back at us</p>
+        <p class="story-kicker">A Little Look Back at Us</p>
         <h2>OUR LOVE STORY</h2>
-        <p>From our first meeting to the beautiful moments that led us here, these are some of the memories we will always treasure.</p></div>
+        <p>From the moment we first met to the moments that brought us here, these are the memories we will always hold close.</p></div>
 
       <div class="story-list">
         <article class="story-item">
@@ -1767,7 +1667,7 @@ body{background:#fff9f6}
             <span class="story-number">01</span>
             <h3 class="story-title">FIRST MEET</h3>
             <div class="story-date">2020</div>
-            <p class="story-text">Our first meeting in the scenic view of Art Sector.</p></div>
+            <p class="story-text">Our first meeting, with the scenic view of Art Sector as the backdrop.</p></div>
           <div class="story-photo">
             <img src="story1.png" alt="First meeting"></div>
         </article>
@@ -1777,7 +1677,7 @@ body{background:#fff9f6}
             <span class="story-number">02</span>
             <h3 class="story-title">FIRST TRIP</h3>
             <div class="story-date">Oct 2020</div>
-            <p class="story-text">Our first adventure together. Start of many places and a lot of memories.</p></div>
+            <p class="story-text">Our first adventure together — the beginning of many places, many memories, and countless moments to come.</p></div>
           <div class="story-photo">
             <img src="story2.png" alt="First trip together"></div>
         </article>
@@ -1787,7 +1687,7 @@ body{background:#fff9f6}
             <span class="story-number">03</span>
             <h3 class="story-title">FIRST DAY IN RELATIONSHIP</h3>
             <div class="story-date">Nov 14, 2020</div>
-            <p class="story-text">During lunchtime with a Paint by Numbers photo of us, we became together officially.</p></div>
+            <p class="story-text">Over lunch, with a Paint by Numbers portrait of us, we officially became a couple.</p></div>
           <div class="story-photo">
             <img src="story3.png" alt="First day in relationship"></div>
         </article>
@@ -1797,7 +1697,7 @@ body{background:#fff9f6}
             <span class="story-number">04</span>
             <h3 class="story-title">THE PROPOSAL</h3>
             <div class="story-date">Nov 16, 2024</div>
-            <p class="story-text">After our Anniversary celebration inside the car, the proposal ring was given &amp; accepted to signify the next level of our relationship.</p></div>
+            <p class="story-text">After celebrating our anniversary inside the car, the proposal ring was given and accepted, marking the next chapter of our relationship.</p></div>
           <div class="story-photo">
             <img src="story4.png" alt="The proposal"></div>
         </article>
@@ -1807,7 +1707,7 @@ body{background:#fff9f6}
             <span class="story-number">05</span>
             <h3 class="story-title">FIRST FLIGHT</h3>
             <div class="story-date">March 2026</div>
-            <p class="story-text">In the blue waters of Bohol, a side trip in a friend's wedding, our first and last trip as before we tie the knot.</p></div>
+            <p class="story-text">Our first flight took us to Bohol, where we enjoyed a side trip for a friend's wedding — our last adventure before tying the knot.</p></div>
           <div class="story-photo">
             <img src="story5.png" alt="First flight and Bohol trip"></div>
         </article>
@@ -1817,7 +1717,7 @@ body{background:#fff9f6}
             <span class="story-number">06</span>
             <h3 class="story-title">OUR WEDDING DAY</h3>
             <div class="story-date">Nov 26, 2026</div>
-            <p class="story-text">In front of God, with our family and close friends, we will begin our life together.</p></div>
+            <p class="story-text">In front of God, surrounded by our family and closest friends, we will begin our life together.</p></div>
           <div class="story-photo">
             <img src="story6.png" alt="Our wedding day"></div>
         </article></div>
