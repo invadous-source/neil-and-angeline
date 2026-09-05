@@ -1591,6 +1591,54 @@ body{background:#fff9f6}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.001ms!important}
 }
 
+
+/* ---------- LOVE STORY ALIGNMENT POLISH ---------- */
+.love-story-heading::after{
+  content:"✦  ♡  ✦";
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  height:auto;
+  margin:24px auto 0;
+  background:none;
+  color:#a58a68;
+  letter-spacing:.7em;
+  font-size:.7rem;
+  line-height:1;
+  transform:none;
+}
+
+/* Keep every chapter number perfectly centered inside its story column. */
+.story-copy .story-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  margin:0 auto 16px;
+  text-align:center;
+  flex:none;
+}
+
+/* Keep the decorative ending of the story centered as well. */
+.story-note{
+  display:block;
+  width:100%;
+  margin:72px auto 0;
+  text-align:center;
+}
+.story-note::before{
+  left:50%;
+  transform:translateX(-50%);
+}
+
+@media(max-width:760px){
+  .love-story-heading::after{margin-top:22px;}
+  .story-copy .story-number{margin-left:auto;margin-right:auto;}
+  .story-note{margin-top:58px;text-align:center;}
+}
+
 </style>
 </head>
 <body>
