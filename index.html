@@ -2404,6 +2404,41 @@ footer{
 }
 </style>
 
+
+<style id="overall-wedding-motion">
+/* Premium overall motion system — subtle, romantic, never distracting */
+html{scroll-behavior:smooth}
+body{animation:weddingPageIn 1.2s ease both}
+@keyframes weddingPageIn{from{opacity:0}to{opacity:1}}
+
+/* Soft ambient movement */
+.wedding-hero::before,.save-date-section::before,.love-story-section::before,.venues-section::before,.entourage-section::before,.rsvp-section::before,.finer-details-section::before,.faq-section::before,.memory-upload-section::before,.special-ending-section::before{animation:ambientDrift 14s ease-in-out infinite alternate}
+@keyframes ambientDrift{from{transform:translate3d(-8px,-5px,0) scale(1)}to{transform:translate3d(8px,6px,0) scale(1.025)}}
+
+/* Gentle image breathing */
+img{transition:transform .9s cubic-bezier(.2,.75,.2,1),filter .9s ease}
+.story-photo img,.venue-photo img,.entourage-photo img{will-change:transform}
+.story-photo:hover img,.venue-photo:hover img,.entourage-photo:hover img{transform:scale(1.025)}
+
+/* Buttons feel tactile */
+.cta,.maps-button,.rsvp-button,.memory-button,.music-toggle{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,background .35s ease!important}
+.cta:hover,.maps-button:hover,.rsvp-button:hover,.memory-button:hover,.music-toggle:hover{transform:translateY(-3px) scale(1.015)!important;box-shadow:0 12px 28px rgba(126,63,83,.16)!important}
+.cta:active,.maps-button:active,.rsvp-button:active,.memory-button:active,.music-toggle:active{transform:translateY(0) scale(.985)!important}
+
+/* Section titles get a soft cinematic reveal */
+.section-kicker,.section-title,.section-intro{animation:headingFloat 1s both}
+@keyframes headingFloat{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+
+/* Floating music control */
+.music-toggle{animation:musicBreath 3.8s ease-in-out infinite}
+@keyframes musicBreath{0%,100%{box-shadow:0 8px 22px rgba(126,63,83,.10)}50%{box-shadow:0 10px 28px rgba(126,63,83,.18)}}
+
+/* Prevent motion from becoming overwhelming */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
 </head>
 <body>
 <div class="floating-details" aria-hidden="true">
