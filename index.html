@@ -1539,6 +1539,132 @@ body{background:#fff9f6}
   .story-note{margin-top:58px;text-align:center;}
 }
 
+
+
+/* =========================================================
+   PHASE 2 + 3 — PREMIUM WEDDING DETAILS & EXPERIENCE
+   Night mode intentionally excluded.
+   ========================================================= */
+
+/* --- Love Story: true alternating editorial layout --- */
+.story-item:not(.reverse) .story-copy{grid-column:1;grid-row:1;}
+.story-item:not(.reverse) .story-photo{grid-column:2;grid-row:1;}
+.story-item.reverse .story-photo{grid-column:1;grid-row:1;}
+.story-item.reverse .story-copy{grid-column:2;grid-row:1;}
+.story-item:not(.reverse) .story-copy{text-align:right;}
+.story-item.reverse .story-copy{text-align:left;}
+.story-item:not(.reverse) .story-number{margin-left:auto;margin-right:0;}
+.story-item.reverse .story-number{margin-left:0;margin-right:auto;}
+.story-item:not(.reverse) .story-title,.story-item:not(.reverse) .story-text{margin-left:auto;margin-right:0;}
+.story-item.reverse .story-title,.story-item.reverse .story-text{margin-left:0;margin-right:auto;}
+.story-item:not(.reverse) .story-photo{transform:rotate(1.2deg);}
+.story-item.reverse .story-photo{transform:rotate(-1.2deg);}
+.story-item:not(.reverse):hover .story-photo{transform:translateY(-9px) rotate(0deg);}
+.story-item.reverse:hover .story-photo{transform:translateY(-9px) rotate(0deg);}
+
+/* --- Premium venue cards --- */
+.venue-card{position:relative;overflow:hidden;}
+.venue-card::before{content:"";position:absolute;inset:9px;border:1px solid rgba(190,111,132,.10);pointer-events:none;}
+.venue-card::after{content:"✦";position:absolute;right:20px;top:16px;color:#d3a07e;font-size:.72rem;opacity:.7;}
+.venue-location{font-size:1.02rem;}
+.maps-button{position:relative;overflow:hidden;}
+.maps-button::after{content:"";position:absolute;top:0;bottom:0;width:70px;left:-90px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);transition:left .6s ease;}
+.maps-button:hover::after{left:115%;}
+
+/* --- Wedding party: more editorial hierarchy --- */
+.party-card{min-height:100%;}
+.party-card h3{font-size:.68rem;letter-spacing:.28em;}
+.party-name{transition:transform .25s ease,color .25s ease;}
+.party-name:hover{transform:translateX(4px);color:#9b596c;}
+.party-feature{padding:15px 5px 12px;}
+.party-feature::before{content:"♡";display:block;margin:0 auto 12px;color:#d08a9b;font-size:1rem;}
+.party-feature .party-role-title{margin-bottom:12px;}
+
+/* --- RSVP: make the invitation moment feel special --- */
+.rsvp-section{padding-top:120px;padding-bottom:120px;}
+.rsvp-inner{position:relative;}
+.rsvp-card{position:relative;border-radius:6px;padding:48px 38px 44px;overflow:hidden;}
+.rsvp-card::before{content:"";position:absolute;inset:10px;border:1px solid rgba(178,138,105,.15);pointer-events:none;}
+.rsvp-card::after{content:"♡";position:absolute;top:14px;right:19px;color:#d2a17d;font-size:.85rem;}
+.rsvp-button{min-width:220px;}
+.rsvp-button::first-letter{font-size:1.05em;}
+.rsvp-button:focus-visible,.memory-button:focus-visible,.maps-button:focus-visible{outline:2px solid #b65f78;outline-offset:4px;}
+
+/* --- Finer details / dress code visual treatment --- */
+.detail-section{position:relative;}
+.detail-section-title{letter-spacing:.12em;}
+.dress-card{position:relative;overflow:hidden;}
+.dress-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(190,111,132,.10);pointer-events:none;}
+.color-swatches{margin:16px auto 20px;}
+.swatch{box-shadow:0 0 0 1px rgba(100,70,70,.08),0 5px 12px rgba(90,60,60,.08);}
+
+/* --- FAQ: cleaner accordion interaction --- */
+.faq-question{transition:background .25s ease,color .25s ease;padding:21px 22px;}
+.faq-item.open .faq-question{color:#9d596c;background:rgba(255,245,247,.58);}
+.faq-icon{transition:transform .3s ease,color .3s ease;}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:#b65f78;}
+.faq-answer p{max-width:760px;}
+
+/* --- Guest gallery: memory-book styling --- */
+.memory-upload-section{padding-top:112px;padding-bottom:120px;}
+.memory-upload-inner{position:relative;}
+.memory-upload-inner::before,.memory-upload-inner::after{content:"✦";position:absolute;color:rgba(181,95,120,.18);font-size:4rem;pointer-events:none;}
+.memory-upload-inner::before{left:0;top:35px;transform:rotate(-15deg);}
+.memory-upload-inner::after{right:0;bottom:25px;transform:rotate(15deg);}
+.memory-grid{position:relative;}
+.memory-step{position:relative;overflow:hidden;border-radius:5px;transition:transform .3s ease,box-shadow .3s ease;}
+.memory-step::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,#d8a079,#c9788b,#d8a079);transform:scaleX(.35);transition:transform .35s ease;}
+.memory-step:hover{transform:translateY(-7px);box-shadow:0 20px 42px rgba(95,72,57,.12);}
+.memory-step:hover::after{transform:scaleX(1);}
+.memory-button{min-width:300px;}
+
+/* --- Special ending polish --- */
+.special-ending-inner{animation:elegantFadeUp 1s ease both;}
+.ending-heart{filter:drop-shadow(0 6px 10px rgba(183,124,114,.16));}
+
+/* --- Floating quick navigation for the long invitation --- */
+.wedding-quick-nav{
+  position:fixed;right:20px;bottom:22px;z-index:80;
+  display:flex;align-items:center;gap:5px;padding:7px;
+  border:1px solid rgba(190,111,132,.20);border-radius:999px;
+  background:rgba(255,250,249,.82);backdrop-filter:blur(16px);
+  box-shadow:0 14px 35px rgba(82,58,62,.13);
+  opacity:0;transform:translateY(12px);pointer-events:none;
+  transition:opacity .3s ease,transform .3s ease;
+}
+.wedding-quick-nav.visible{opacity:1;transform:none;pointer-events:auto;}
+.wedding-quick-nav a{
+  display:grid;place-items:center;width:38px;height:38px;border-radius:50%;
+  color:#805565;text-decoration:none;font-size:.72rem;
+  transition:background .25s ease,color .25s ease,transform .25s ease;
+}
+.wedding-quick-nav a:hover,.wedding-quick-nav a.active{background:#f2dce2;color:#a6536d;transform:translateY(-2px);}
+.wedding-quick-nav .quick-home{font-size:1rem;}
+.wedding-quick-nav .quick-tip{position:absolute;right:0;bottom:52px;white-space:nowrap;padding:7px 10px;border-radius:8px;background:#5f4c52;color:#fff;font-size:.62rem;letter-spacing:.05em;opacity:0;transform:translateY(4px);pointer-events:none;transition:.2s ease;}
+.wedding-quick-nav a:hover + .quick-tip{opacity:1;transform:none;}
+
+/* --- Refined mobile presentation --- */
+@media(max-width:760px){
+  .story-item:not(.reverse) .story-copy,.story-item:not(.reverse) .story-photo,
+  .story-item.reverse .story-copy,.story-item.reverse .story-photo{grid-column:1;grid-row:auto;}
+  .story-item:not(.reverse) .story-copy,.story-item.reverse .story-copy{text-align:left;}
+  .story-item:not(.reverse) .story-number,.story-item.reverse .story-number{margin-left:0;margin-right:auto;}
+  .story-item:not(.reverse) .story-title,.story-item:not(.reverse) .story-text,
+  .story-item.reverse .story-title,.story-item.reverse .story-text{margin-left:0;margin-right:auto;}
+  .story-item:not(.reverse) .story-photo,.story-item.reverse .story-photo{transform:rotate(0deg);justify-self:start;}
+  .story-item:not(.reverse) .story-copy{order:1;}
+  .story-item:not(.reverse) .story-photo{order:2;}
+  .story-item.reverse .story-photo{order:1;}
+  .story-item.reverse .story-copy{order:2;}
+  .rsvp-section{padding-top:88px;padding-bottom:92px;}
+  .rsvp-card{padding:38px 22px 34px;}
+  .memory-upload-section{padding-top:82px;padding-bottom:92px;}
+  .memory-upload-inner::before,.memory-upload-inner::after{display:none;}
+  .memory-button{min-width:0;width:100%;}
+  .wedding-quick-nav{right:50%;transform:translate(50%,12px);bottom:14px;padding:6px;}
+  .wedding-quick-nav.visible{transform:translate(50%,0);}
+  .wedding-quick-nav a{width:34px;height:34px;}
+}
 </style>
 </head>
 <body>
@@ -1579,6 +1705,14 @@ body{background:#fff9f6}
       <a href="#rsvp">RSVP</a>
       <a href="#guest-gallery">Gallery</a></div>
   </nav>
+
+  <div class="wedding-quick-nav" id="weddingQuickNav" aria-label="Quick navigation">
+    <a class="quick-home" href="#home" aria-label="Home">♡</a>
+    <a href="#our-story" aria-label="Our story">01</a>
+    <a href="#venues" aria-label="Venues">02</a>
+    <a href="#rsvp" aria-label="RSVP">03</a>
+    <a href="#guest-gallery" aria-label="Gallery">04</a>
+  </div>
 
   <section class="hero wedding-hero" id="home">
     <div class="hero-inner">
@@ -2074,6 +2208,26 @@ document.querySelectorAll('.faq-question').forEach(function(button){
 <script>
 (function(){
   document.addEventListener('DOMContentLoaded', function(){
+    // Premium quick navigation appears after the guest starts scrolling.
+    var quickNav = document.getElementById('weddingQuickNav');
+    if(quickNav){
+      var quickLinks = Array.from(quickNav.querySelectorAll('a'));
+      var quickSections = quickLinks.map(function(link){ return document.querySelector(link.getAttribute('href')); }).filter(Boolean);
+      function updateQuickNav(){ quickNav.classList.toggle('visible', window.scrollY > 420); }
+      updateQuickNav();
+      window.addEventListener('scroll', updateQuickNav, {passive:true});
+      if(quickSections.length){
+        var quickObserver = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              quickLinks.forEach(function(link){ link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id); });
+            }
+          });
+        }, {threshold:0.35, rootMargin:'-20% 0px -55% 0px'});
+        quickSections.forEach(function(section){ quickObserver.observe(section); });
+      }
+    }
+
 
     // Reveal major content gracefully as the visitor scrolls.
     var selectors = [
