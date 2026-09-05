@@ -1804,7 +1804,9 @@ body{color:var(--ink);background:var(--cream);}
 .ending-message{color:#765d64!important;}
 
 /* Elegant rose-gold dividers */
-.love-story-heading::after,
+.love-story-heading::after{
+  background:none!important;
+}
 .entourage-ornament::before,
 .entourage-ornament::after,
 .venue-divider::before,
@@ -1882,6 +1884,11 @@ body{color:var(--ink);background:var(--cream);}
   .story-item:hover .story-photo{transform:translateY(-3px)!important;}
 }
 
+</style>
+<style>
+/* Final soft-pink button pass */
+.cta,.maps-button,.rsvp-button,.memory-button,.music-toggle{background:linear-gradient(135deg,#e8a9b6,#d98a9d)!important;}
+.cta:hover,.maps-button:hover,.rsvp-button:hover,.memory-button:hover,.music-toggle:hover{background:linear-gradient(135deg,#dfa0af,#d18196)!important;}
 </style>
 </head>
 <body>
@@ -2470,8 +2477,3 @@ document.querySelectorAll('.faq-question').forEach(function(button){
 </body>
 </html>
 
-<style>
-/* Final soft-pink button pass */
-.cta,.maps-button,.rsvp-button,.memory-button,.music-toggle{background:linear-gradient(135deg,#e8a9b6,#d98a9d)!important;}
-.cta:hover,.maps-button:hover,.rsvp-button:hover,.memory-button:hover,.music-toggle:hover{background:linear-gradient(135deg,#dfa0af,#d18196)!important;}
-</style>
